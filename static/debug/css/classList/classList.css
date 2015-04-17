@@ -1,0 +1,45 @@
+.classList .topTitle{background:#e0e0e0;border-bottom:1px solid #cfcfcf;}
+.classList .topTitle .creatBtn{padding:30px 0px 10px 20px;}
+.classList .topTitle .tips{padding:20px 0 10px 20px;}
+/*搜索开始*/
+.classList .searchBox{padding:20px;line-height: 30px;}
+.classList .searchBox .searchBoxLeft .cInput{width:220px;}
+.classList .searchBox .selectList select{margin-top:6px;margin-left:10px;width: 80px}
+.classList .searchBox .submits{padding:4px 10px;font-size: 14px;margin-left:10px;}
+/*搜索结束*/
+/*搜索具体列表开始*/
+.classList .classLists{padding:20px;border-top:1px solid #fff;}
+.classList .classLists .hd a{color:#2187c8;margin:0 5px;}
+.classList .classLists .hd a:hover{color:#f90;}
+.classList .classLists .hd a.active{cursor: default;color: #333;}
+
+.classList .classLists .hd{padding-bottom:10px;}
+.classList .classLists .bd{border: 1px solid #d1d1d1;line-height: 22px;background:#fff;}
+.classList .classLists .tableTitle{background: url(../../images/common/th_bg_1.gif) repeat-x;height:40px;line-height:40px;border-bottom: 1px solid #d1d1d1;}
+.classList .classLists .tableTitle{padding:0px 15px;}
+.classList .classLists .tableTitle li{float: left;text-align: center;}
+.classList .classLists li.className{width: 180px;}
+.classList .classLists li.teacher{width: 130px;}
+.classList .classLists li.grade{width: 120px;}
+.classList .classLists li.period{width: 110px;}
+.classList .classLists li.student{width: 110px;}
+.classList .classLists li.time{width: 90px;}
+.classList .classLists .alignCenter{padding:20px 0px;text-align: center;font-size: 14px;}
+
+.classList .classLists .tabContent li.cf{padding:10px 15px;border-bottom:1px solid #d1d1d1;}
+.classList .classLists .tabContent li.cf .ctrlList{width: 90px;}
+.classList .classLists .tabContent .secUl li{float: left;text-align: center;}
+.classList .classLists .tabContent .tips{color: #999;padding-top:10px;}
+/*搜索具体列表结束*/
+/*弹出修改基本信息样式开始*/
+.classInfo .FormModifyBaseInfo li{padding:6px 0px;}
+.classInfo .FormModifyBaseInfo li span{width: 110px;text-align: right;}
+.classInfo .FormModifyBaseInfo li input{margin-left:10px;}
+.classInfo .FormModifyBaseInfo li p.in{float: left;margin-left:10px;color: #666;}
+.classInfo .FormModifyBaseInfo li .Validform_checktip{float:left;}
+/*弹出修改基本信息样式结束*/
+
+/*新增时间选择等*/
+.classInfo .FormModifyBaseInfo ul li.selectChoose select{width:75px;margin-right: 5px;text-align:center;margin-left: 10px;height: 24px;line-height: 24px;}
+.classInfo .FormModifyBaseInfo ul li.selectChoose span.selectItem{margin-right: 15px;}
+.classInfo .FormModifyBaseInfo ul li.selectChoose .sign{margin-left: 10px;}

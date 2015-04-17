@@ -1,0 +1,51 @@
+<div class="j_addTeacher_dialog undis">
+	<div class="classInfo cf">
+		<div class="teacherSelect">
+			<div class="teacherArea">
+				<!-- 更换班级需要的显示内容开始 -->
+				<ul class="changeClassBox">
+					<li class="tit undis">
+						<span class="teacherRule"></span>
+						<span class="bold teacherOldName"></span>
+						更换为
+						<span class="teacherNewName">未选择</span>	
+					</li>
+					<li class="red undis">
+						更换后，<span class="bold teacherOldName"></span>在本班还未进行的<em class="nums">0</em>节课的任课老师也将自动替换。
+					</li>
+				</ul>
+				<!-- 更换班级需要的显示内容结束 -->
+				<div class="hd">
+					<div class="teacherSelectSearchBox">
+						<input type="text" class="cInput fl" placeholder="老师真实姓名、宣传姓名、ID" />
+						<a href="javascript:void(0)" class="submits fl comBlueBtn">搜索</a>
+					</div>
+					<a href="javascript:void(0);" class="blueText allDatas fl">显示全部</a>
+				</div>
+				<div class="bd teacherShows">
+  <!-- {foreach from=$subjectTeacher key=key item=val}
+					<div class="box">
+						<span class="tit">{$key}</span>
+						<ul>
+							{foreach from=$val key=keys item=vals}
+							<li class="cf">
+								<span class="radio fl">
+									<em name="teacherId" class="emRadio" value="{$vals.teacherId}"></em>
+								</span>
+								<span class="name fl">
+									<a href="{$vals.teacherinfourl}" class="blueText" target='_blank'>{$vals.truthName}</a>
+								</span>
+								<span class="code fl">编码：{$vals.teacherCode}</span>
+								<span class="img ">
+									<img src="{$vals.path}" alt="">
+								</span>
+							</li>
+							{/foreach}
+						</ul>
+					</div>
+{/foreach} -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<title>{$title}</title>
+<link rel="shortcut icon" href=" /favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/{$static_url}/{$static_version}/css/forgetpass/style.css" />
+<!-- 定义全局变量开始 -->
+{include file="{$site_url}/include/var.htm"}
+<!-- 定义全局变量结束 -->
+</head>
+<body>
+<!-- 头部开始 -->
+{include file="{$site_url}/include/header.htm"}
+<!-- 头部结束 -->
+<!-- 主要内容开始 -->
+<div id="moduleId" pagename="forgetpass" class="forgetpass">
+	<div class="layout">
+		<h2 class="title">重新设置密码</h2>
+		<div class="cons">
+			<!-- /index.php/post/login/sendCode
+			       // $_REQUEST['telephone'] = '13371772618'; -->
+			<form action="/{$post_config['forgetPass']}" class="FormResetPassword" method="post" onsubmit="return false;">
+				<ul>
+					<li class="cf">
+						<span class="t fl">手机号：</span>
+						<input type="text" class="cInput telephone fl" name="telephone" placeholder="创建账号时使用的手机号" value="" />
+					</li>
+					<li class="cf">
+						<span class="t fl">短信验证码：</span>
+						<input type="text" class="cInput capcode fl" name="code">
+						<a href="javascript:void(0)" class="sendWord fl">发送短信验证码</a>
+					</li>
+					<li class="cf">
+						<span class="t fl">设置新密码：</span>
+						<input type="password" class="cInput setNewPassword fl" name="newPass" placeholder="6-16位，数字、字母或标点符号">
+					</li>
+					<li class="cf">
+						<span class="t fl">再次输入新密码：</span>
+						<input type="password" class="cInput setNewPasswordSec fl" name="reNewPass" placeholder="再次输入新密码">
+					</li>
+					<li>
+						<input type="submit" class="submits comBlueBtn yh" value="提交" />
+					</li>
+				</ul>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- 主要内容结束 -->
+<!-- 底部开始 -->
+{include file="{$site_url}/include/footer.htm"}
+<!-- 底部结束 -->
+<!-- js引入开始 -->
+{include file="{$site_url}/include/js.htm"}
+<!--js引入结束-->
+</body>
+</html>

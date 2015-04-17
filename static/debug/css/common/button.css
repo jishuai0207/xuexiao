@@ -1,0 +1,12 @@
+/*绿色按钮开始*/
+.comBlueBtn{background:#60a8da;border: 0px;border-radius:6px;border-bottom: 1px solid #3b81be;padding:8px 40px;cursor: pointer;color: #fff;font-size:18px;}
+.comBlueBtn:hover{background-color:#4494cb;color: #fff;}
+/*绿色按钮结束*/
+/*白色按钮开始*/
+.comWhiteBtn{background:#fff;background: linear-gradient(#ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  background: -webkit-linear-gradient(#ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  background: -moz-linear-gradient(#ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  background: -o-linear-gradient(#ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  background: -ms-linear-gradient(#ffffff 0%, #f6f6f6 47%, #ededed 100%);border-radius:6px;border-bottom: 1px solid #3b81be;padding:8px 40px;border: 0px;cursor: pointer;color: #333;font-size:18px;box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2)}
+.comWhiteBtn:hover{opacity: 0.8;filter: alpha(opacity=80);color: #333;background:#f8f8f8;}
+/*白色按钮结束*/

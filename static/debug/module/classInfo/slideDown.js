@@ -1,0 +1,9 @@
+define(function(require,exports){
+	$('.slideUl').hover(function(){
+		$(this).addClass('slideUlHover');
+		$(this).find('ul').show();
+	},function(){
+		$(this).removeClass('slideUlHover');
+		$(this).find('ul').hide();
+	})
+})

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<title>机构首页</title>
+<link rel="shortcut icon" href=" /favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/{$static_url}/{$static_version}/css/createClass/style.css" />
+<!-- 定义全局变量开始 -->
+{include file="{$site_url}/include/var.htm"}
+<!-- 定义全局变量结束 -->
+</head>
+<body>
+<!-- 头部开始 -->
+{include file="{$site_url}/include/header.htm"}
+<!-- 头部结束 -->
+<!-- 主要内容开始 -->
+<div class="wrap layout">
+    <!-- 右侧开始 -->
+    <div class="mainContent comBg fr" id="mainContent">
+    	<div class="createClass" id="moduleId" pagename="createClass">
+			<!--创建班级开始-->
+			<div class="hd">
+				<h2>创建班级</h2>
+			</div>
+			<div class="content">
+				<form action="/{$post_config.classCreate}" class="formCreatClass" method="post" onsubmit="return false;">
+					<ul>
+						<li class="posr cf">
+							<span class="t fl"><em class="red">*</em>学科：</span>
+							<select class="fl subject">
+								<option value="">请选择学科</option>
+                            {foreach from=$subject key=key item=val}
+                                <option value="{$val.subjectId}">{$val.subjectName}</option>
+                            {/foreach}
+							</select>
+							<i> </i>
+						</li>
+						<li class="posr cf">
+							<span class="t fl"><em class="red">*</em>年级：</span>
+							<select class="fl grade">
+								<option value="">请选择年级</option>
+                            {foreach from=$grade key=key item=val}
+                                <option value="{$val.gradeId}">{$val.gradeName}</option>
+                            {/foreach}
+							</select>
+							<i> </i>
+						</li>
+						<li class="posr cf teacherCon">
+							<span class="t fl"><em class="red">*</em>任课老师：</span>
+							<div class="teacherCon fl">
+								<ul class="fl teacherNames"></ul>
+								<a href="javascript:void(0);" class="j_addTeacher comWhiteBtn fl">添加老师</a>
+							</div>
+						</li>
+						<li class="posr cf">
+							<span class="t fl"><em class="red">*</em>班型：</span>
+							<select class="fl classType">
+								<option value="">请选择班型</option>
+                            {foreach from=$classType key=key item=val}
+                                <option value="{$val->code}">{$val->name}</option>
+                            {/foreach}
+							</select>
+							<i> </i>
+						</li>
+						<li class="posr cf undis">
+							<span class="t fl"><em class="red">*</em>学期：</span>
+							<ul class="period fl">
+								
+							</ul>
+						</li>
+						<!-- 新增授课时段等字段 -->
+						<li class="posr cf selectChoose">
+							<span class="t fl"><em class="red">*</em>授课时段：</span>
+							<select class="chooseWeek fl">
+								<option value="1">星期一</option>
+								<option value="2">星期二</option>
+								<option value="3">星期三</option>
+								<option value="4">星期四</option>
+								<option value="5">星期五</option>
+								<option value="6">星期六</option>
+								<option value="7">星期日</option>
+							</select>
+							
+							<select class="choosePhase fl">
+								<option value="1">第一期</option>
+								<option value="2">第二期</option>
+								<option value="3">第三期</option>
+								<option value="4">第四期</option>
+								<option value="5">第五期</option>
+								<option value="6">第六期</option>
+							</select>
+
+
+							<select class="beginHour fl">
+								<option value="">--</option>
+								{section name=loop loop=3}
+								<option value="0{$smarty.section.loop.index+7}">0{$smarty.section.loop.index+7}</option>
+								{/section}
+								{section name=loop loop=14}
+								<option value="{$smarty.section.loop.index+10}">{$smarty.section.loop.index+10}</option>
+								{/section}
+							</select>
+							<select class="beginMin fl">
+								<option value="">--</option>
+								{section name=loop loop=2}
+								<option value="0{$smarty.section.loop.index*5}">0{$smarty.section.loop.index*5}</option>
+								{/section}
+								{section name=loop loop=10}
+								<option value="{$smarty.section.loop.index*5+10}">{$smarty.section.loop.index*5+10}</option>
+								{/section}
+							</select>
+							<span class="fl sign">--</span>
+							<select class="endHour fl">
+								<option value="">--</option>
+								{section name=loop loop=3}
+								<option value="0{$smarty.section.loop.index+7}">0{$smarty.section.loop.index+7}</option>
+								{/section}
+								{section name=loop loop=14}
+								<option value="{$smarty.section.loop.index+10}">{$smarty.section.loop.index+10}</option>
+								{/section}
+							</select>
+							<select class="endMin fl">
+								<option value="">--</option>
+								{section name=loop loop=2}
+								<option value="0{$smarty.section.loop.index*5}">0{$smarty.section.loop.index*5}</option>
+								{/section}
+								{section name=loop loop=10}
+								<option value="{$smarty.section.loop.index*5+10}">{$smarty.section.loop.index*5+10}</option>
+								{/section}
+							</select>
+						</li>
+						<li class="posr cf selectChoose">
+							<span class="t fl"><em class="red">*</em>开课时间：</span>
+							<span class="fl selectItem"><select class="beginYear chooseYear fl">
+								
+							</select><span class="fl">年</span></span>
+
+							<span class="fl selectItem"><select class="beginMonth chooseMonth fl">
+								<option value="">--</option>
+								{section name=loop loop=9}
+								<option value="0{$smarty.section.loop.index+1}">0{$smarty.section.loop.index+1}</option>
+								{/section}
+								{section name=loop loop=3}
+								<option value="{$smarty.section.loop.index+10}">{$smarty.section.loop.index+10}</option>
+								{/section}
+							</select><span class="fl">月</span></span>
+							
+							<span class="fl selectItem"><select disabled="disabled" class="beginDay chooseDay fl">
+								<option value="0" selected>--</option>
+							</select><span class="fl">日</span></span>
+						</li>
+						<li class="posr cf selectChoose">
+							<span class="t fl"><em class="red">*</em>结课时间：</span>
+							<span class="fl selectItem"><select class="endYear chooseYear fl">
+							</select><span class="fl">年</span></span>
+
+							<span class="fl selectItem"><select class="endMonth chooseMonth fl">
+								<option value="">--</option>
+								{section name=loop loop=9}
+								<option value="0{$smarty.section.loop.index+1}">0{$smarty.section.loop.index+1}</option>
+								{/section}
+								{section name=loop loop=3}
+								<option value="{$smarty.section.loop.index+10}">{$smarty.section.loop.index+10}</option>
+								{/section}
+							</select><span class="fl">月</span></span>
+							
+							<span class="fl selectItem"><select disabled="disabled" class="endDay chooseDay fl">
+								<option selected value="0">--</option>
+								{section name=loop loop=9}
+								<option value="0{$smarty.section.loop.index+1}">0{$smarty.section.loop.index+1}</option>
+								{/section}
+								{section name=loop loop=22}
+								<option value="{$smarty.section.loop.index+10}">{$smarty.section.loop.index+10}</option>
+								{/section}
+							</select><span class="fl">日</span></span>
+						</li>
+
+
+
+
+						<li class="posr cf">
+							<span class="t fl"><em class="red">*</em>班级名称：</span>
+							<input type="text" name="" id="" value="" class="cInput className fl" />
+							<em class="fl tip">请输入1~30个字符</em>
+						</li>
+						<li class="posr cf">
+							<span class="t fl"><em class="red">*</em>授课地点：</span>
+							<input type="text" name="" id="" value="" class="cInput address fl" />
+						</li>
+											
+
+						<li>
+							<div class="subm">
+								<input type="submit" class="comBlueBtn yh submitDiv" value="创建" />
+							</div>
+						</li>
+					</ul>
+				</form>
+			</div>
+			<!--创建班级结束-->
+		</div>
+    </div>
+    <!-- 右侧结束 -->
+    <!-- 左侧导航开始 -->
+    {include file="{$site_url}/include/left_menu.htm"}
+    <!-- 左侧导航结束 -->
+</div>
+<!-- 主要内容结束 -->
+<!-- 底部开始 -->
+{include file="{$site_url}/include/footer.htm"}
+<!-- 底部结束 -->
+<!-- js引入开始 -->
+{include file="{$site_url}/include/js.htm"}
+<!--js引入结束-->
+<!-- 添加老师弹出层样式开始 -->
+{include file="{$site_url}/include/dialog_html/j_addTeacher_dialog.htm"}
+<!-- 添加老师弹出层样式结束 -->
+</body>
+</html>

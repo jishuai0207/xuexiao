@@ -1,0 +1,49 @@
+select 
+	stuHw.id,
+	stu.truthName as '姓名',
+	stu.`code` as '学员编码',
+	cls.classCode as '班级编码',
+	cls.className as '班级名称',
+	ls.num as '讲次',
+	case 
+	when count(ans.id)=0 then '未上传'
+	when (
+		select 
+			count(score.id) 
+		from shouke.score score  
+			left join shouke.score_attr attr on score.id = attr.score_id and attr.`key`='HOMEWORK_ID' 
+		where 
+			score.student_id = stuHw.studentId 
+			and attr.value=hw.id
+			and attr.id is not NULL
+			and score.source = 3
+			and score.type = 2
+	)>0 then '微信'
+	else 'PC'
+	end '主观题',
+	case 
+	when count(imgAns.id)=0 then '未上传'
+	when (
+		select 
+			count(score.id) 
+		from shouke.score score  
+			left join shouke.score_attr attr on score.id = attr.score_id and attr.`key`='HOMEWORK_ID'
+		where 
+			score.student_id = stuHw.studentId 
+			and attr.value=hw.id
+			and attr.id is not NULL
+			and score.source = 3
+			and score.type = 1
+	)>0 then '微信'
+	else 'PC'
+	end '客观题'
+from student_homework stuHw
+	left join Student stu on stuHw.studentId = stu.id 
+	left join Class cls on stuHw.classId = cls.id
+	left join HomeWork hw on stuHw.homeWorkId = hw.id
+	left join Lesson ls on hw.num = ls.id 
+	left join Answer ans on ans.studentHomeWork  = stuHw.id
+	left join Topic tp on ans.topicId = tp.id and tp.questionType = 1
+	left join ImgAnswer imgAns on imgAns.studentHomeWorkId = stuHw.id
+where  stu.id is not null and ls.id is not null and stuHw.submitTime>'2015-01-24 00:00:00' 
+group by stuHw.id

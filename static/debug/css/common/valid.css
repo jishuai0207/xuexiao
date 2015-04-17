@@ -1,0 +1,17 @@
+/*```````````表单验证插件开始``````````````````*/
+.ValidformTips{border:1px solid #ffbd5b; padding:2px 5px; color:#666;display:none;line-height:32px;background:#ffe972;}
+.Validform_checktip{overflow:hidden;color:#333;}
+.Validform_right{color:#71b83d;padding-left:20px;}
+.Validform_wrong{color:#f60;padding-left:10px;white-space:nowrap;}
+.Validform_loading{padding-left:20px;}
+.Validform_error{background-color:#fff7cb;border-color:#ffbd5b!important;}
+.Validform_right,
+#Validform_msg{display:none!important}
+
+/*信息框在input上面的样式开始*/
+.ValidformInfo{border:1px solid #ffbd5b; padding:2px 5px; color:#666; position:absolute;top: -34px; left: 0px;display:none;line-height:20px;background-color:#ffe972;}
+.dec {bottom: -8px;display: block;height: 8px;overflow: hidden;position: absolute;left: 10px;width: 17px;}
+.dec s {font-family: simsun;font-size: 16px;height: 19px;left: 0;line-height: 21px;position: absolute;text-decoration: none;top: -9px;width: 17px;}
+.dec .dec1 {color: #ffbd5b;}
+.dec .dec2 {color: #ffe972;top: -10px;}
+/*信息框在input上面的样式结束*/

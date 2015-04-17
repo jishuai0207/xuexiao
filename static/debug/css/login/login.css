@@ -1,0 +1,24 @@
+.loginBg body{background: none;}
+.loginBg{background:#eefaff}
+.login h1{background:url(../../images/login/logo.gif) no-repeat;text-indent: -999em;overflow:hidden;margin-top: 120px;width: 436px;height:35px;}
+.login .con{background: url(../../images/login/login_bg.jpg) no-repeat center top #284d81;height:373px;margin-top:10px;}
+.login .logins{width:260px;margin-top:50px;}
+.login .logins p.outInfo{color: #ff0;font-size: 14px;}
+.login .logins h2{font-size:22px;font-weight: normal;color:#fff;margin-bottom:10px;}
+.login .logins li{margin:6px 0px;}
+.login .logins input.text{height: 40px;line-height:normal;line-height: 40px\9;border: 0px;width:210px;border-radius: 5px;border:2px solid #4e76a0;padding:0px 10px 0 38px;font-size:16px;}
+.login .logins input.username{background: url(../../images/login/ico_username_grey.png) no-repeat 10px 7px #b6dff5;}
+.login .logins input:focus{border-color: #74d0ff}
+.login .logins input.username:focus{background: url(../../images/login/ico_username_blue.png) no-repeat 10px 7px #b6dff5;_background: url(../../images/login/ico_username_blue_8.png) no-repeat 10px 7px #b6dff5;}
+.login .logins input.password{background: url(../../images/login/ico_password_grey.png) no-repeat 10px 7px #b6dff5;_background: url(../../images/login/ico_password_grey_8.png) no-repeat 10px 7px #b6dff5;}
+.login .logins input.password:focus{background: url(../../images/login/ico_password_blue.png) no-repeat 10px 7px #b6dff5;_background: url(../../images/login/ico_password_blue_8.png) no-repeat 10px 7px #b6dff5;}
+.login .logins li .Validform_checktip{padding-top:5px;display: block;}
+.login .logins li.i{margin-top:10px;}
+.login .logins li.i,.login .logins li.i a{color: #fff}
+.login .logins li.i input{vertical-align: middle;margin-right:5px;}
+.login .logins .s{margin-top:20px;}
+.login .logins .submits{background:#23b4ff;border-radius: 5px;height: 40px;line-height: 40px;text-align: center;font-size:16px;border: 0px;width: 260px;cursor: pointer;color: #fff;}
+.login .logins .submits:hover{opacity: 0.8;filter: alpha(opacity=80);}
+.login .tels{padding-top:10px;}
+.login .tels .tel{background: url(../../images/login/ico_tel.gif) no-repeat left;padding-left:20px;color: #666;font-size:14px;}
+

@@ -1,0 +1,125 @@
+<div class="j_modifyBaseInfo_dialog undis">
+	<div class="classInfo cf">
+		<!-- 内容开始 -->
+		<form action="/{$post_config.classMod}" class="FormModifyBaseInfo_beta" method="post" onsubmit='return false'>
+            {if $pageType neq ''}<input type="hidden" name="pageType" value="{$pageType}">{/if}
+			<ul>
+				<li class="cf">
+					<span class="t fl"><em class="red">*</em>班级名称：</span>
+					<input type="text" class="classNames cInput fl" name="className" value="" />
+					<p class="fl in">请输入1~30个字符</p>
+				</li>
+				<li class="cf">
+					<span class="t fl"><em class="red">*</em>授课地点：</span>
+					<input type="text" class="address cInput fl" name="place" value=""/>
+				</li>
+				<!-- 新增授课时段等字段 -->
+				<li class=" cf selectChoose">
+						<span class="t fl"><em class="red">*</em>授课时段：</span>
+							<select name="chooseWeek" class="chooseWeek fl">
+								<option value="1">星期一</option>
+								<option value="2">星期二</option>
+								<option value="3">星期三</option>
+								<option value="4">星期四</option>
+								<option value="5">星期五</option>
+								<option value="6">星期六</option>
+								<option value="7">星期日</option>
+							</select>
+							
+							<select name="choosePhase" class="choosePhase fl">
+								<option value="1">第一期</option>
+								<option value="2">第二期</option>
+								<option value="3">第三期</option>
+								<option value="4">第四期</option>
+								<option value="5">第五期</option>
+								<option value="6">第六期</option>
+							</select>
+
+
+							<select name="beginHour" class="beginHour fl">
+								<option value="">--</option>
+								{section name=loop loop=3}
+								<option value="0{$smarty.section.loop.index+7}">0{$smarty.section.loop.index+7}</option>
+								{/section}
+								{section name=loop loop=14}
+								<option value="{$smarty.section.loop.index+10}">{$smarty.section.loop.index+10}</option>
+								{/section}
+							</select>
+							<select name="beginMin" class="beginMin fl">
+								<option value="">--</option>
+								{section name=loop loop=2}
+								<option value="0{$smarty.section.loop.index*5}">0{$smarty.section.loop.index*5}</option>
+								{/section}
+								{section name=loop loop=10}
+								<option value="{$smarty.section.loop.index*5+10}">{$smarty.section.loop.index*5+10}</option>
+								{/section}
+							</select>
+							<em class="fl sign">--</em>
+							<select name="endHour" class="endHour fl">
+								<option value="">--</option>
+								{section name=loop loop=3}
+								<option value="0{$smarty.section.loop.index+7}">0{$smarty.section.loop.index+7}</option>
+								{/section}
+								{section name=loop loop=14}
+								<option value="{$smarty.section.loop.index+10}">{$smarty.section.loop.index+10}</option>
+								{/section}
+							</select>
+							<select name="endMin" class="endMin fl">
+								<option value="">--</option>
+								{section name=loop loop=2}
+								<option value="0{$smarty.section.loop.index*5}">0{$smarty.section.loop.index*5}</option>
+								{/section}
+								{section name=loop loop=10}
+								<option value="{$smarty.section.loop.index*5+10}">{$smarty.section.loop.index*5+10}</option>
+								{/section}
+							</select>
+						</li>
+						<li class="cf selectChoose">
+							<span class="t fl"><em class="red">*</em>开课时间：</span>
+							<span class="fl selectItem"><select name="beginYear" class="beginYear chooseYear fl">
+								
+							</select><span>年</span></span>
+
+							<span class="fl selectItem"><select name="beginMonth" class="beginMonth chooseMonth fl">
+								<option value="0">--</option>
+								{section name=loop loop=9}
+								<option value="0{$smarty.section.loop.index+1}">0{$smarty.section.loop.index+1}</option>
+								{/section}
+								{section name=loop loop=3}
+								<option value="{$smarty.section.loop.index+10}">{$smarty.section.loop.index+10}</option>
+								{/section}
+							</select><span>月</span></span>
+							
+							<span class="fl selectItem"><select name="beginDay" class="beginDay chooseDay fl">
+								<option value="0">--</option>
+							</select><span >日</span></span>
+						</li>
+						<li class=" cf selectChoose">
+							<span class="t fl"><em class="red">*</em>结课时间：</span>
+							<span class="fl selectItem"><select name="endYear" class="chooseYear endYear fl">
+							</select><span >年</span></span>
+
+							<span class="fl selectItem"><select name="endMonth" class="chooseMonth endMonth fl">
+								<option value="0">--</option>
+								{section name=loop loop=9}
+								<option value="0{$smarty.section.loop.index+1}">0{$smarty.section.loop.index+1}</option>
+								{/section}
+								{section name=loop loop=3}
+								<option value="{$smarty.section.loop.index+10}">{$smarty.section.loop.index+10}</option>
+								{/section}
+							</select><span >月</span></span>
+							
+							<span class="fl selectItem"><select name="endDay" class="endDay chooseDay fl">
+								<option value="0">--</option>
+							</select><span>日</span></span>
+						</li>
+		
+
+			</ul>
+
+
+			<input type="submit" class="undis" />
+		</form>
+		<!-- 内容结束 -->
+	</div>
+</div>

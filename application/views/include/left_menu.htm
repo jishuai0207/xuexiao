@@ -1,0 +1,77 @@
+<div class="leftMenu fl" id="leftMenu">
+    <ul>
+        {if $menu_hover eq 'index'}
+        <li class="homepage active">
+            {else}
+        <li class="homepage">
+        {/if} 
+            <a href="/{$url_config.index}">
+                <span class="ico"></span>
+                首页
+            </a>
+        </li>
+        {if $menu_hover eq 'teacher'}
+        <li class="teacher active">
+            {else}
+        <li class="teacher">
+        {/if} 
+        <a href="/{$url_config.teacherList}">
+                <span class="ico"></span>
+                老师
+            </a>
+        </li>
+        {if $menu_hover eq 'class'}
+        <li class="class active">
+            {else}
+        <li class="class">
+        {/if} 
+            <a href="/{$url_config.classList}">
+                <span class="ico"></span>
+                班级
+            </a>
+        </li>
+        {if $menu_hover eq 'student'}
+        <li class="student active">
+            {else}
+        <li class="student">
+        {/if} 
+            <a href="/{$url_config.studentList}">
+                <span class="ico"></span>
+                学员
+            </a>
+        </li>
+        {if $menu_hover eq 'classType'}
+        <li class="classType active">
+            {else}
+        <li class="classType">
+        {/if} 
+            <a href="/{$url_config.classTypeList}">
+                <span class="ico"></span>
+                班型
+            </a>
+        </li>
+
+        {if $menu_hover eq 'sign'}
+        <li class="sign active">
+            {else}
+        <li class="sign">
+        {/if} 
+		<a href="/{{$url_config.sign}}">
+                <span class="ico"></span>
+               出勤和成绩
+            </a>
+        </li>
+
+        {if $menu_hover eq 'sysManage'}
+        <li class="system active">
+            {else}
+        <li class="system">
+        {/if} 
+        <a href="/{$url_config.sysManage}">
+                <span class="ico"></span>
+                系统管理
+            </a>
+        </li>
+
+    </ul>
+</div>

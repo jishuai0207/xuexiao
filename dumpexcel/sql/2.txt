@@ -1,0 +1,101 @@
+select 
+	tea.truthName as '教师姓名',
+	cls.classCode as '班级编码',
+	cls.className as '班级名称',
+	`subject`.`name` as '学科',
+	grade.`name` as '年级',
+	ls.num as '讲次',
+	count(distinct sign.id) as '出勤学员',
+	count(distinct clsStu.id) as '班级学员人数',
+	count(DISTINCT
+		case 
+		when (
+			select 
+				count(ans.id) 
+			from Answer ans 
+				left join Topic tp on ans.topicId = tp.id
+			where tp.questionType=1 and ans.studentHomeWork= stuHw.id
+		)>0 then stuHw.id
+		end
+	) as '客观题提交人数',
+	concat(TRUNCATE(count(DISTINCT
+		case 
+		when (
+			select 
+				count(ans.id) 
+			from Answer ans 
+				left join Topic tp on ans.topicId = tp.id
+			where tp.questionType=1 and ans.studentHomeWork= stuHw.id
+		)>0 then stuHw.id
+		end
+	)/count(clsStu.id)*100,2),'%') as '客观题提交比例',
+	count( distinct 
+		case 
+		when (
+			select 
+				count(imgAns.id) 
+			from ImgAnswer imgAns 
+			where imgAns.studentHomeWorkId = stuHw.id
+		)>0 then stuHw.id
+		end
+	) as '主观题提交人数',
+	concat(TRUNCATE(count( DISTINCT
+		case 
+		when (
+			select 
+				count(imgAns.id) 
+			from ImgAnswer imgAns 
+			where imgAns.studentHomeWorkId = stuHw.id
+		)>0 then stuHw.id
+		end
+	)/count(clsStu.id)*100,2),'%') as '主观题提交比例',
+	count( DISTINCT
+		case
+		when (
+			select 
+				count(imgAns1.id) 
+			from ImgAnswer imgAns1
+			where imgAns1.studentHomeWorkId = stuHw.id
+		)=0 and stuHw.status!=1
+		then stuHw.id
+		end
+	) as '主观题未批改人数',
+	concat(TRUNCATE(count( DISTINCT 
+		case
+		when (
+			select 
+				count(imgAns1.id) 
+			from ImgAnswer imgAns1
+			where imgAns1.studentHomeWorkId = stuHw.id
+		)>0 and stuHw.status = 1
+		then stuHw.id
+		end
+	)/count( DISTINCT
+		case 
+		when (
+			select 
+				count(imgAns.id) 
+			from ImgAnswer imgAns 
+			where imgAns.studentHomeWorkId = stuHw.id
+		)>0 then stuHw.id
+		end
+	)*100,2),'%') as '主观题批改比例'
+from `Schedule` `sch`
+	left join Class cls on sch.classId = cls.id 
+	left join classRefStuTea clsStu on clsStu.classId = cls.id and type=0
+	left join ClassType clsType on cls.classTypeId = clsType.id
+	left join Grade grade on grade.id = clsType.grade 
+	left join Subject subject on `subject`.id = clsType.subject
+	left join Lesson ls on sch.lessonId = ls.id	
+	left join shouke.sign_info sign on sign.class_id = cls.id and sign.lesson_id = ls.id and sign_time is not null 
+	left join HomeWork hw on hw.num = ls.id and hw.classtype = clsType.id
+	left join student_homework stuHw on stuHw.homeWorkId = hw.id and stuHw.classId = cls.id
+	left join Teacher tea on (case when sch.replaceTeacher is null then sch.teacher else sch.replaceTeacher end) = tea.id 
+where 
+	cls.id is not null 
+	and tea.id is not null 
+	and ls.id is not null 
+	and clsType.period=4 
+	and stuHw.submitTime>'2015-01-24 00:00:00'
+GROUP BY cls.id,ls.id
+	

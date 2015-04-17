@@ -1,0 +1,21 @@
+.studentInfos .topTitle{background:#e0e0e0;border-bottom:1px solid #cfcfcf;padding:30px 15px;}
+
+.studentInfos .topTitle .studentInfo p.hsImg{background:#f4f4f4;border:1px solid #d1d1d1;width:150px;height:150px;margin-left:20px;}
+.studentInfos .topTitle .studentInfo p.hsImg img{width: 150px;height:150px;;}
+.studentInfos .topTitle .studentInfo .text{margin-left:15px;}
+.studentInfos .topTitle .studentInfo .text h2{font-size:18px;font-weight: normal;padding-bottom:5px;}
+.studentInfos .topTitle .studentInfo .text ul{width: 700px;;}
+.studentInfos .topTitle .studentInfo .text ul li{width: 220px;height:30px;line-height: 30px;float: left;overflow: hidden;}
+.studentInfos .topTitle .studentInfo .text ul li.long{width: 440px;}
+.studentInfos .topTitle .actions{position: absolute;bottom:0px;right:20px;line-height: 30px;;}
+.studentInfos .topTitle .actions a.comWhiteBtn{padding:8px 10px;font-size: 14px;margin-left:10px;} 
+.studentInfos .classLists{margin:30px;}
+
+.studentInfos .studentInfo{padding-bottom: 10px;}
+.studentInfos .classLists .hd{padding-bottom:10px;}
+.studentInfos .classLists .hd a{color:#2187c8;margin:0px 5px;}
+.studentInfos .classLists .hd a:hover{color:#f90;}
+.studentInfos .classLists .hd a.active{cursor: default;color: #333;}
+
+.studentInfos .joinClass{margin-bottom:20px;}
+.studentInfos .joinClass .joinNewClass{padding:6px 15px;line-height:30px;font-size:14px;}

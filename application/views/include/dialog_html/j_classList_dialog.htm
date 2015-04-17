@@ -1,0 +1,46 @@
+<div class="j_classList_dialog undis">
+    <div class="j_classList_dialog cf" classid="{$classId}" studentId="">
+        <!-- 搜索加筛选项开始 -->
+        <div class="hd">
+            <!-- 筛选开始 -->
+            <span class="screen fr">
+                <select name="" id="" class="grades fr">
+                    <option value="">全部年级</option>
+                {foreach from=$gradelist key=key item=val}
+                    <option value="{$val.gradeId}">{$val.gradeName}</option>
+                {/foreach}
+                </select>
+                <select name="" id="" class="subjects fr">
+                    <option value="">全部科目</option>
+                {foreach from=$subjectlist key=key item=val}
+                    <option value="{$val.subjectId}">{$val.subjectName}</option>
+                {/foreach}
+                </select>
+            </span>
+            <!-- 筛选结束 -->
+            <!-- 搜索开始 -->
+            <span class="fl searchClass">
+                <input type="text" class="in cInput fl" placeholder="任课老师姓名、班级编码" />
+                <a href="javascript:void(0);" class="comBlueBtn fl submits">搜索</a>
+                <a href="javascript:void(0);" class="fl allDatas blueText">显示全部</a>
+            </span>
+            <!-- 搜索结束 -->
+        </div>
+        <!-- 搜索加筛选项结束 -->
+        <!-- 搜索信息列表开始 -->
+        <div class="bd">
+            <ul class="title cf">
+                <li class="radio fl">radio</li>
+                <li class="name fl">班级名称</li>
+                <li class="code fl">班级编码</li>
+                <li class="teacher fl">任课老师</li>
+                <li class="subject fl">年级科目</li>
+                <li class="studentNumber fl">学员数</li>
+            </ul>
+            <div class="cons classListShows">
+
+            </div>
+        </div>
+        <!-- 搜索信息列表结束 -->
+    </div>
+</div>

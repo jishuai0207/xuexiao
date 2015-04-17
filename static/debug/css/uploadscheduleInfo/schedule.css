@@ -1,0 +1,58 @@
+.uploadScheduleInfo{}
+.uploadScheduleInfo .hd{background: #e0e0e0;height:50px;line-height: 50px;border-bottom:1px solid #cfcfcf}
+.uploadScheduleInfo .hd h2{font-size: 18px;font-weight: normal;padding-left:25px;}
+.uploadScheduleInfo .content{border-top: 1px solid #fff;}
+.uploadScheduleInfo .content .up{padding-bottom:50px;}
+
+.uploadScheduleInfo .content .step1{margin:100px 0px;text-align: center;}
+.uploadScheduleInfo .content .step1 .comBlueBtn{margin-top:40px;}
+.uploadScheduleInfo .content .step1 .comWhiteBtn{font-size:14px;}
+.uploadScheduleInfo .content .step1 .nextGreyBtn{background:#ccc;cursor: default;}
+.uploadScheduleInfo .content .step1 .nextBlueBtn{margin-top:50px;}
+.uploadScheduleInfo .content .step1 .inMsg{height:50px;font-size: 16px;}
+
+
+.uploadScheduleInfo .content .step2{margin:30px;}
+.uploadScheduleInfo .content .step2 .wrongArea{background:#fffdef;border:1px solid #fdca4f;padding:10px;margin-bottom:25px;}
+.uploadScheduleInfo .content .step2 .wrongArea h2{color:#e80000;font-size:16px;font-weight:normal;}
+.uploadScheduleInfo .content .step2 .wrongArea span.wongSu{padding:10px 0px;display: block;color:#0089d0;line-height: 22px;}
+.uploadScheduleInfo .content .step2 .wrongArea span.wongSu a{margin-right:5px;}
+.uploadScheduleInfo .content .step2 .wrongArea p{padding:15px 0;}
+.uploadScheduleInfo .content .step2 .wrongArea .comBlueBtn{font-size:14px;padding:8px 10px;}
+.uploadScheduleInfo .content .step2 .entryBox{padding-top:40px;text-align: center;}
+.uploadScheduleInfo .content .step2 .entryBox a{margin:0px 15px;}
+.uploadScheduleInfo .content .step2 .pink{background:#ffeded;}
+.uploadScheduleInfo .content .step2 .entryBox .grey{background: #999;cursor: default;}
+
+/*录入成功样式开始*/
+.uploadScheduleInfoSuccess .hd {
+    height: 60px;
+    line-height: 60px;
+    margin-left: 300px;
+    margin-top: 100px;
+    border:0;
+    background-color: #F8F8F8;
+}
+.uploadScheduleInfoSuccess .content{border:none;}
+.uploadScheduleInfoSuccess .hd h2{background:url(../../images/common/success.png) no-repeat  25% center #e6f3f8;width:180px;border:1px solid #C9E2F1;font-size: 18px;font-weight: normal;padding-left:120px;}
+.uploadScheduleInfoSuccess .creatSuccess.textAlign{padding-left: 250px;} 
+/*录入成功样式结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

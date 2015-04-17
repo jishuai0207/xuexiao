@@ -1,0 +1,4 @@
+.layout{width:1000px; margin:0 auto;}
+.wrap{background: #dadbdb;background:url(../../images/common/wrap_bg.gif) repeat-y left #f8f8f8;}
+.wrap .mainContent{width: 920px;}
+.wrap .leftMenu{min-height: 770px;}

@@ -1,0 +1,63 @@
+.uploadTeacherInfo{}
+.uploadTeacherInfo .hd{background:#e0e0e0;height:50px;line-height: 50px;border-bottom:1px solid #cfcfcf}
+.uploadTeacherInfo .hd h2{font-size: 18px;font-weight: normal;padding-left:25px;}
+.uploadTeacherInfo .content{border-top: 1px solid #fff;}
+.uploadTeacherInfo .content .up{padding-bottom:50px;}
+
+.uploadTeacherInfo .content .step1{margin:100px 0px;text-align: center;}
+.uploadTeacherInfo .content .step1 .comBlueBtn{margin-top:40px;}
+.uploadTeacherInfo .content .step1 .comWhiteBtn{font-size:14px;}
+.uploadTeacherInfo .content .step1 .nextGreyBtn{background:#ccc;cursor: default;}
+.uploadTeacherInfo .content .step1 .nextBlueBtn{margin-top:50px;}
+.uploadTeacherInfo .content .step1 .inMsg{height:50px;font-size: 16px;}
+
+.uploadTeacherInfo .content .step2 .studentInfos{border:1px solid #d1d1d1;margin:15px;background: #fff;}
+.uploadTeacherInfo .content .step2 .studentInfos .hd{padding:0px 15px;height: 40px;line-height: 40px;background: url(../../images/common/th_bg_1.gif) repeat-x;}
+.uploadTeacherInfo .content .step2 .studentInfos .bd{font-size: 16px;text-align: center;padding:30px 0;}
+.uploadTeacherInfo .content .step2 .studentInfos .bd span.s{margin:0px 15px;}
+
+.uploadTeacherInfo .content .step2 .problems.problems{border:1px solid #d1d1d1;margin:15px;background: #fff;}
+.uploadTeacherInfo .content .step2 .problems .hd{padding:0px 15px;height: 40px;line-height: 40px;background: url(../../images/common/th_bg_1.gif) repeat-x;}
+.uploadTeacherInfo .content .step2 .problems .hd a{font-size:14px;padding:5px 20px;margin-left:10px;}
+.uploadTeacherInfo .content .step2 .problems .comTable{margin:30px 15px;}
+
+.uploadTeacherInfo .content .step2 .entryBox{text-align: center;padding:50px 0px;}
+.uploadTeacherInfo .content .step2 .entryBox a{margin:0px 10px;}
+.uploadTeacherInfo .content .step2 .entryBox .grey{background: #999;cursor: default;}
+
+.uploadTeacherInfo p.io{padding:50px 0 50px 20px;font-size: 14px;text-align: center}
+.uploadTeacherInfo .inputSuccess{text-align: center}
+.uploadTeacherInfo .inputSuccess a{margin:0px 10px;}
+
+
+/*录入成功样式开始*/
+.uploadTeacherInfoSuccess .hd {
+    height: 60px;
+    line-height: 60px;
+    margin-left: 300px;
+    margin-top: 100px;
+    border:0;
+    background-color: #F8F8F8;
+}
+.uploadTeacherInfoSuccess .content{border:none;}
+.uploadTeacherInfoSuccess .hd h2{background:url(../../images/common/success.png) no-repeat  25% center #e6f3f8;width:180px;border:1px solid #C9E2F1;font-size: 18px;font-weight: normal;padding-left:120px;}
+.uploadTeacherInfoSuccess .creatSuccess.textAlign{padding-left: 250px;} 
+/*录入成功样式结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

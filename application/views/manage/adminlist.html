@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<title>{$title}</title>
+<link rel="shortcut icon" href=" /favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/{$static_url}/{$static_version}/css/adminList/style.css" />
+<!-- 定义全局变量开始 -->
+{include file="{$site_url}/include/var.htm"}
+<!-- 定义全局变量结束 -->
+</head>
+<body>
+<!-- 头部开始 -->
+{include file="{$site_url}/include/header.htm"}
+<!-- 头部结束 -->
+<!-- 主要内容开始 -->
+<div class="wrap layout">
+    <!-- 右侧开始 -->
+    <div class="mainContent comBg fr" id="mainContent">
+        <div class="adminList" id="moduleId" pagename="adminList">
+            <div class="conrtent">
+                <div class="comTable">
+                    <table cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <th>管理员</th>
+                            <th>用户名</th>
+                            <th>创建时间</th>
+                        </tr>
+						{if $user neq false}
+					{foreach from=$user item=v}
+                        <tr>
+							<td>{$v->truthName}</td>
+							<td>{$v->userName}</td>
+							<td>{$v->createTime}</td>
+                        </tr>
+					{/foreach}
+					{else}
+					<tr><td>没有管理员</td></tr>
+					{/if}
+                    </table>
+                </div>
+                <p class="info">添加管理员请联系爱学习客服400-898-1009</p>
+                <!-- 分页开始 -->
+                <div class="page cf">
+                    <div class="pageContent">
+					{$page}
+                    </div>
+                </div>
+                <!-- 分页结束 -->
+            </div>
+        </div>
+    </div>
+    <!-- 右侧结束 -->
+    <!-- 左侧导航开始 -->
+    {include file="{$site_url}/include/left_menu.htm"}
+    <!-- 左侧导航结束 -->
+</div>
+<!-- 主要内容结束 -->
+<!-- 底部开始 -->
+{include file="{$site_url}/include/footer.htm"}
+<!-- 底部结束 -->
+<!-- js引入开始 -->
+{include file="{$site_url}/include/js.htm"}
+<!--js引入结束-->
+</body>
+</html>

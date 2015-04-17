@@ -1,0 +1,33 @@
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4e3ef1f2db9d0ec691a65a63b4faac5e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div class="header layout">
+    <a href="/{$url_config.index}" class="logo fl">机构管理中心</a>
+    <div class="info fr">
+        {if $isLogin eq 1}
+        <div class="headerSlidown fr posr">
+            <span class="title">{$AdmintruthName}</span>
+            <ul class="undis">
+				<!--
+                <li>
+                    <a href="/{$url_config.modifyPass}" target="_blank">修改密码</a>
+                </li>
+				-->
+                <li>
+                    <a href="/{$post_config.logout}">退出</a>
+                </li>
+            </ul>
+        </div>
+        {/if}
+        <p class="fr">
+            客服电话：400-898-1009
+        </p>
+		<span class="orgNames fr">{if isset($session_info.insName)}{$session_info.insName}{/if}</span>
+        </div>
+    </div>

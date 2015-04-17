@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<title>{$title}</title>
+<link rel="shortcut icon" href=" /favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/{$static_url}/{$static_version}/css/classtype/style.css" />
+<!-- 定义全局变量开始 -->
+{include file="{$site_url}/include/var.htm"}
+<!-- 定义全局变量结束 -->
+</head>
+<body>
+<!-- 头部开始 -->
+{include file="{$site_url}/include/header.htm"}
+<!-- 头部结束 -->
+<!-- 主要内容开始 -->
+<div class="wrap layout" id="moduleId" pagename="classType">
+    <!-- 右侧开始 -->
+    <div class="mainContent comBg fr" id="mainContent">
+        <div class="classtype" id="moduleId" pagename="">
+            <div class="topTitle">
+                <h2 class="titles">我的班型</h2>
+                <!-- 搜索开始 -->
+                <form method="post" action="{$url.post}" class="searchBox cf">
+                    <select name="grade" id="" class="fl">
+                        <option value="">全部年级</option>
+						{foreach from=$grade key=k item=v}
+						{if $cgrade eq $k}
+						<option selected="selected" value="{$k}">{$v}</option>
+						{else}
+						<option value="{$k}">{$v}</option>
+						{/if}
+						{/foreach}
+                    </select>
+                    <input type="submit" class="submits comBlueBtn yh fl" value="筛选" />
+                </form>
+                <!-- 搜索结束 -->
+            </div>
+            <!-- 主要区域开始 -->
+            <div class="classTypeList">
+                <div class="hd">
+                    <span class="fr">
+						{if $total neq 0}
+						共<em>{$total}</em>个班型
+						{/if}
+                    </span>
+                </div>
+                <div class="bd">
+                    <ul class="titleUl cf">
+                        <li class="types">自定义名称</li>
+                        <li class="code">初始名称</li>
+                        <li class="subject">学科</li>
+                        <li class="grade">年级</li>
+                        <li class="period">学期</li>
+                        <li class="status">状态</li>
+                        <li class="currentClassNum">当前班级</li>
+                        <li class="historyClassNum">历史班级</li>
+                    </ul>
+					{if $classTypeList neq false}
+					{foreach from=$classTypeList item=value}
+                    <ul class="contentUl cf">
+                        <li class="types">
+                            <div class="typesEdit">
+                                <div class="editName"><span class="typeName">{$value.custom}</span><a class="fblue editBtn" href="javascript:void(0)">【修改】</a></div>
+                                <div class="editNameHidden">
+                                    <input value="{$value.custom}" name="typeName" maxlength="20"/>
+									<div><a class="sureEdit" typecode="{$value.code}" href="javascript:void(0)">确定</a>
+                                         <a class="fblue cancleEdit" href="javascript:void(0)">取消</a></div>
+                                </div>
+                                <div class="typesCode grey">班型编码：{$value.code}</div>
+                            </div>
+                        </li>
+                        <li class="code">{$value.name}</li>
+                        
+                        <li class="subject">{$value.sname}</li>
+                        <li class="grade">{$value.gname}</li>
+                        <li class="periodArea">
+                            <div class="periodAreaList">
+								{foreach from=$value.period item=v}
+                                <ul class="cf">
+                                    <li class="period">{$v.name}</li>
+                                    <li class="status">{$v.status}</li>
+                                    <li class="currentClassNum">
+                                    {if $v.cur neq '0'}
+                                        <a href="{$v.curUrl}" target="_blank" class="blueText">{$v.cur}</a>
+                                        {else}
+                                        {$v.cur}
+                                        {/if}
+                                    </li>
+                                    <li class="historyClassNum">
+                                    {if $v.his neq '0'}
+                                        <a href="{$v.hisUrl}" target="_blank" class="blueText">{$v.his}</a>
+                                        {else}
+                                        {$v.his}
+                                        {/if}
+                                    </li>
+                                </ul>
+								{/foreach}
+                            </div>
+                        </li>
+                    </ul>
+					{/foreach}
+				{else}
+					<li>没有班型信息</li>
+				{/if}
+                </div>
+				<!-- 分页开始 -->
+				<div class="page cf">
+					<div class="pageContent">
+								{$page}
+					</div>
+				</div>
+            </div>
+            <!-- 主要区域结束 -->
+        </div>
+    </div>
+    <!-- 右侧结束 -->
+    <!-- 左侧导航开始 -->
+    {include file="{$site_url}/include/left_menu.htm"}
+    <!-- 左侧导航结束 -->
+</div>
+<!-- 主要内容结束 -->
+<!-- 底部开始 -->
+{include file="{$site_url}/include/footer.htm"}
+<!-- 底部结束 -->
+<!-- js引入开始 -->
+{include file="{$site_url}/include/js.htm"}
+<!--js引入结束-->
+</body>
+</html>

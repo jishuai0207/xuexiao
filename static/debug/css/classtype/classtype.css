@@ -1,0 +1,32 @@
+.classtype .topTitle{background:#e0e0e0;border-bottom:1px solid #cfcfcf;padding:20px 15px;}
+.classtype .topTitle h2.titles{font-size:18px;font-weight: normal;}
+
+.classtype .searchBox{padding-top:15px;}
+.classtype .searchBox select{margin-top:3px;margin-right:10px;}
+.classtype .searchBox .comBlueBtn{padding:4px 10px;font-size: 12px;}
+
+.classtype .classTypeList{margin:20px;}
+.classtype .classTypeList .hd{padding-bottom: 10px;}
+.classtype .classTypeList .hd span em{color: #c00}
+.classtype .classTypeList .bd{border:1px solid #d1d1d1;background: #fff;line-height: 28px;}
+.classtype .classTypeList .bd .titleUl{background: url(../../images/common/th_bg_1.gif) repeat-x;height:40px;line-height:40px;border-bottom: 1px solid #d1d1d1;}
+.classtype .classTypeList .bd li{padding:0px 5px;text-align: center;}
+.classtype .classTypeList .bd li{float: left;}
+.classtype .classTypeList .bd li.types{width: 350px;padding-left:10px;text-align: left;}
+.classtype .classTypeList .bd li.code{width: 117px}
+/* .classtype .classTypeList .bd li.status{width: 80px} */
+.classtype .classTypeList .bd li.subject{width: 50px}
+.classtype .classTypeList .bd li.grade{width: 59px}
+.classtype .classTypeList .bd li.period{width: 28px}
+.classtype .classTypeList .bd li.currentClassNum{width: 70px}
+.classtype .classTypeList .bd li.historyClassNum{width: 80px}
+.classtype .classTypeList .contentUl{border-bottom:1px solid #d1d1d1;position: relative;}
+/*修改*/
+.classtype .classTypeList .bd .titleUl li.period{border-left: 1px solid #eaeaea;}
+.classtype .classTypeList .bd li.periodArea{border-left:1px solid #e2e2e2;padding: 0px;}
+.classtype .classTypeList .bd li.periodArea .periodAreaList ul li{border-bottom:1px solid #e2e2e2;}
+.classtype .classTypeList .bd li.types .typesCode{position: absolute;bottom: 0;width:500px;} 
+.classtype .classTypeList .bd li.types .sureEdit{text-align: center;display: inline-block;width:55px;height: 25px;line-height: 25px;background-color: #ececec;border:1px splid #c7c7c7;}
+.classtype .classTypeList .bd li.types .editNameHidden{display: none;margin-top: 10px;}
+.classtype .classTypeList .bd li.types .editNameHidden input{margin-bottom: 5px;height: 30px;line-height: 30px;border:1px solid #c4c4c4;width: 280px;}
+.classtype .classTypeList .bd li.types .editName{margin-bottom: 30px;}

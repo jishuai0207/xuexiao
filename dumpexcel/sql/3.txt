@@ -1,0 +1,31 @@
+select 
+	stu.code as '学生编码',
+	stu.studentCode as '学生学号',
+	stu.truthName as '学生姓名',
+	cls.classCode as '班号',
+	cls.className as '班名',
+	ls.num as '讲次',
+	sch.beginTime as '上课时间',
+	tea.truthName as '任课老师',
+	stuHw.submitTime as '提交时间',
+ 	CASE
+ 	when count(topic.id)!=0 then 1
+ 	when count(topic.id)=0 then 0 
+ 	end '客观题状态',
+ 	CASE
+ 	when count(imgAns.id)!=0 then 1
+ 	when count(imgAns.id)=0 then 0 
+ 	end '主观题状态'
+from student_homework stuHw
+	left join Student stu on stuHw.studentId = stu.id
+	left join Class cls on stuHw.classId = cls.id
+	left join ClassType clsType on clsType.id = cls.classTypeId
+	left join HomeWork hw on stuHw.homeWorkId = hw.id
+	left join Lesson ls on hw.num = ls.id
+	left join Answer ans on stuHw.id = ans.studentHomeWork
+	left join Topic topic on ans.topicId = topic.id and topic.questionType = 1
+	left join ImgAnswer imgAns on imgAns.studentHomeWorkId = stuHw.id
+	left join Schedule sch on sch.classId = cls.id and sch.lessonId = ls.id
+	left join Teacher tea on tea.id = (case when sch.replaceTeacher is null then sch.teacher else sch.replaceTeacher end)
+where stu.id is not null and cls.id is not null and stuHw.submitTime>'2015-01-24 00:00:00' and clsType.period=4
+group by stuHw.id	

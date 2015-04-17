@@ -1,0 +1,120 @@
+select 
+	cls.id,
+	clsType.name as '班型名称',
+	cls.classCode as '班级编码',
+	`subject`.`name` as '学科',
+	grade.`name` as '年级',
+	lsn.num as '讲次',
+	count(distinct `sign`.student_id) as '出勤学员人数',
+	count(distinct 
+		case  
+		when 
+			(
+				select
+					count(ans.id)
+				from Answer ans
+				left join Topic tp on ans.topicId = tp.id
+				where studentHomeWork = stuHw.id and tp.questionType=1
+				GROUP BY studentHomeWork
+			) >0 
+		then stuHw.id 
+		end
+	) as '客观题提交人数',
+	concat(
+		TRUNCATE(
+			count( distinct 
+				case  
+				when 
+					(
+						select
+							count(ans.id)
+						from Answer ans
+							left join Topic tp on ans.topicId = tp.id
+						where studentHomeWork = stuHw.id and tp.questionType=1
+						GROUP BY studentHomeWork
+					) >0 
+				then stuHw.id
+				end
+			)/count(distinct clsStu.userId)*100,2
+		),'%'
+	) as '客观题提交比例',
+	count(distinct 
+		case  
+		when 
+			(
+				select
+					count(id)
+				from ImgAnswer 
+				where studentHomeWorkId = stuHw.id
+				GROUP BY studentHomeWorkId
+			) >0 then stuHw.id 
+		end
+	) as '主观题提交人数',
+	concat(
+		TRUNCATE(
+			count(distinct 
+				case  
+				when 
+					(
+						select
+							count(id)
+						from ImgAnswer 
+						where studentHomeWorkId = stuHw.id
+						GROUP BY studentHomeWorkId
+					) >0 
+				then stuHw.id 
+				end
+			)/count(distinct clsStu.userId)*100,2
+		),'%'
+	) as '主观题提交比例',
+	count(DISTINCT stuHw.id) as '提交作业总人数',
+	count(distinct 
+		case 
+		when 
+		(
+			select
+				count(id)
+			from ImgAnswer 
+			where studentHomeWorkId = stuHw.id
+			GROUP BY studentHomeWorkId
+		) > 0
+		and (stuHw.status != 1 or stuHw.status is NULL) then stuHw.id
+		end
+	) as '主观题未批改人数',
+	CONCAT(TRUNCATE(count(distinct
+		case 
+		when 
+			(
+			select
+				count(id)
+			from ImgAnswer 
+			where studentHomeWorkId = stuHw.id
+			GROUP BY studentHomeWorkId
+		) >0
+		and stuHw.status = 1 then stuHw.id
+		end
+	)/count(DISTINCT 
+		case  
+		when 
+			(
+				select
+					count(id)
+				from ImgAnswer 
+				where studentHomeWorkId = stuHw.id
+				GROUP BY studentHomeWorkId
+			) >0 then stuHw.id 
+		end
+	)*100,2),'%') as '主观题批改比例'
+from Class cls
+	left join ClassType clsType on cls.classTypeId = clsType.id
+	LEFT JOIN Grade grade on clsType.grade = grade.id
+	left join `Subject` subject on `subject`.id = clsType.`subject`
+	left join Lesson lsn on lsn.classTypeId = clsType.id
+	left join HomeWork hw on hw.classtype=clsType.id	and hw.num = lsn.id
+	left join student_homework stuHw on stuHw.classId = cls.id and stuHw.homeworkId=hw.id
+	left join shouke.sign_info `sign` on `sign`.class_id = cls.id and `sign`.lesson_id = lsn.id
+	left join classRefStuTea clsStu on clsStu.classId = cls.id and type=0
+where 
+	stuHw.submitTime>'2015-01-24 00:00:00' and
+  clsType.period=4
+group by cls.id,lsn.id;

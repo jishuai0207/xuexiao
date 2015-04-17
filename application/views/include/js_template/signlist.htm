@@ -1,0 +1,20 @@
+<script id="signList" type="text/html">
+		{{each info as value i}}
+		<tr siid="{{$value->siid}}" lid="{{$value->lesson_id}}" cid="{{$value->cid}}">
+			<td>{{$value->school}}</td>
+			<!--
+			<td>{{$value->truthName}}</td>
+			<td class="w100">{{$value->classCode}}</td>
+			<td class="w170">{{$value->className}}</td>
+			<td>{{$value->subDate}}</td>
+			<td>{{$value->subTime}}</td>
+			<td>{{if $value->issign eq '0'}}<font class="red">{{/if}}{{$value->signInfo}}</td>
+			<td>{{$value->scoreInfo}}</td>
+			<td>{{$value->teacher[0]}}{{if $value->teacher[1] neq ''}}</br>{{$value->teacher[1]}}{{/if}}</td>
+			<td>{{$value->replaceInfo}}</td>
+			<td>{{$value->refInfo}}</td>
+			<td class="w100">{{$value->parentTel1}}</td>
+			-->
+		</tr>
+		{{/each}}
+</script>

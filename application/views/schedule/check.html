@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<title>上传排课信息表</title>
+<link rel="shortcut icon" href=" /favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/{$static_url}/{$static_version}/css/uploadscheduleInfo/style.css" />
+<!-- 定义全局变量开始 -->
+{include file="{$site_url}/include/var.htm"}
+<!-- 定义全局变量结束 -->
+</head>
+<body>
+<!-- 头部开始 -->
+{include file="{$site_url}/include/header.htm"}
+<!-- 头部结束 -->
+<!-- 主要内容开始 -->
+<div class="wrap layout">
+    <!-- 右侧开始 -->
+    <div class="mainContent comBg fr" id="mainContent">
+    	<div class="uploadScheduleInfo" check="check" classId="{$classId}" filemd5="{$fileMd5}" id="moduleId" pagename="uploadScheduleInfo">
+    		<div class="hd">
+				<h2>上传排课信息表</h2>
+			</div>
+			<div class="content">
+				<div class="step2">
+					<!-- 错误信息区域开始 -->
+					<div class="wrongArea">
+						<h2></h2>
+						<span class="wongSu"></span>
+						<p>
+							<a href="/{$url_config.scheduleUpload}?classId={$classId}" class="comBlueBtn">返回上一步,重新上传文件</a>
+						</p>
+					</div>
+					<!-- 错误信息区域结束 -->
+					<!-- 列表开始 -->
+					<div class="comTable wrongAreaList">
+						
+					</div>
+					<!-- 列表结束 -->
+					<div class="entryBox cf">
+						<a href="javascript:void(0)" class="comBlueBtn subs">确定</a>
+						<a href="/{$url_config.scheduleUpload}?classId={$classId}"  class="comWhiteBtn return">上一步</a>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <!-- 右侧结束 -->
+    <!-- 左侧导航开始 -->
+    {include file="{$site_url}/include/left_menu.htm"}
+    <!-- 左侧导航结束 -->
+</div>
+<!-- 主要内容结束 -->
+<!-- 底部开始 -->
+{include file="{$site_url}/include/footer.htm"}
+<!-- 底部结束 -->
+<!-- js引入开始 -->
+{include file="{$site_url}/include/js.htm"}
+<!--js引入结束-->
+</body>
+</html>

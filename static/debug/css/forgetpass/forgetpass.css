@@ -1,0 +1,13 @@
+.forgetpass .layout{background: #f8f8f8}
+
+.forgetpass .layout h2.title{height:52px;line-height: 52px;background: #e0e0e0;border-botom:1px solid #e0e0e0;padding-left:25px;font-weight: normal;}
+.forgetpass .layout .cons{border-top: 1px solid #fff;font-size:14px;}
+.forgetpass .layout .cons form{margin:50px 0 400px 260px;line-height: 30px;}
+.forgetpass .layout .cons form li{padding:10px 0px;}
+.forgetpass .layout .cons form li span.t{width: 120px;text-align: right;}
+.forgetpass .layout .cons form li a.sendWord{background:url(../../images/forgetpass/btn.gif) no-repeat;border:0px;width: 130px;height:31px;line-height: 31px;cursor: pointer;text-align: center;}
+.forgetpass .layout .cons form li a.sendWord:hover{opacity: 0.8;filter: alpha(opacity=80);color: #333;}
+.forgetpass .layout .cons form li a#sendWordOk{background:#ccc;cursor: default;}
+.forgetpass .layout .cons form li a#sendWordOk:hover{opacity: 1;filter: alpha(opacity=100);}
+.forgetpass .layout .cons form li .cInput{width: 200px;margin-right:10px;}
+.forgetpass .layout .cons form li .submits{margin-left:120px;}

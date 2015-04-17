@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<title>修改老师信息</title>
+<link rel="shortcut icon" href=" /favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/{$static_url}/{$static_version}/css/teacherAdd/style.css" />
+<!-- 定义全局变量开始 -->
+{include file="{$site_url}/include/var.htm"}
+<!-- 定义全局变量结束 -->
+</head>
+<body>
+<!-- 头部开始 -->
+{include file="{$site_url}/include/header.htm"}
+<!-- 头部结束 -->
+<!-- 主要内容开始 -->
+<div class="wrap layout">
+    <!-- 右侧开始 -->
+    <div class="mainContent comBg fr" id="mainContent">
+        <div class="teacherAdd" id="moduleId" pagename="teacherAdd">
+            <div class="hd">
+                <h2>修改老师信息</h2>
+            </div>
+            <div class="content">
+                <form action="/{$post_config.teacherMod}" method="post" class="formInputTeacher formModifyTeacher" onsubmit="return false;" teacherId="{$teacherId}">
+                    <ul class="pd">
+                        <li class="posr cf">
+                            <span class="t fl"><em class="red">*</em>真实姓名：</span>
+                            <input name="truthName" type="text" class="cInput username fl" value="{$truthName}" />
+                            <p class="grey">汉字或英文，最多4个汉字或40个英文字母</p>
+                        </li>
+						<!--
+                        <li class="posr cf">
+                            <span class="t fl"><em class="red">*</em>姓名拼音：</span>
+                            <input type="text" name="sort" class="cInput username fl"  value="{$sort}" />
+                            <p class="grey">如“王小明”的全拼为“wangxiaoming”</p>
+                        </li>
+						-->
+                        <li class="posr cf">
+                            <span class="t fl"><em class="red"></em>宣传姓名：</span>
+                            <input type="text" name="nickName" class="cInput username fl" value="{$nickname}"  />
+                            <p class="grey">老师不便透露真名时填写。如果填写，家长和学员将只看到此姓名</p>
+                        </li>
+                        <li class="posr cf">
+                            <span class="t fl"><em class="red">*</em>手机：</span>
+                            <input name="telphone" type="text" class="cInput mobile fl"  value="{$telphone}" />
+                        </li>
+                        <li class="cf subject">
+                            <span class="t fl"><em class="red">*</em>学科：</span>
+                            <ul class="subjectli fl">
+                                {foreach from=$subject key=k item=v}
+                                <li>
+{if $v.isselect eq 1}
+                                <a href="javascript:void(0);" class="active" subjectId="{$v.subjectId}">{$v.subjectName}</a>
+{else}
+                                <a href="javascript:void(0);" subjectId="{$v.subjectId}">{$v.subjectName}</a>
+{/if}
+                                </li>
+                                {/foreach}
+                            </ul>
+                        </li>
+
+                        <!--<li class="posr cf">
+                            <span class="t fl"><em class="red"></em>在职/离职：</span>
+                                {foreach from=$inJob key=key item=val}
+                            <label class="fl">
+{if $val.isselect eq 1}
+                                <input type="radio" name="injob" value="{$val.type}" checked class="fl sex">{$val.desc}
+{else}
+                                <input type="radio" name="injob" value="{$val.type}" class="fl sex">{$val.desc}
+{/if}
+                            </label>
+                                {/foreach}
+						</li> -->
+                        <li class="posr cf">
+                            <span class="t fl">性别：</span>
+                            {foreach from=$sex key=key item=val}
+                            <label class="fl">
+{if $val.isselect eq 1}
+                                <input type="radio" name="sex" value="{$val.type}" checked class="fl sex">{$val.desc}
+{else}
+                                <input type="radio" name="sex" value="{$val.type}" class="fl sex">{$val.desc}
+{/if}
+                            </label>
+                            {/foreach}
+                        </li>
+                        <li class="posr cf">
+                            <span class="t fl"><em class="red"></em>邮箱：</span>
+                            <input type="text" name="email" class="cInput email fl"  value="{$email}"/>
+                        </li>
+                        <li class="posr cf">
+                            <span class="t fl">身份证号：</span>
+                            <input type="text" name="idCard" class="cInput sfz fl" value="{$idCard}"/>
+                        </li>
+                        <li class="posr cf">
+                            <span class="t fl">出生年月：</span>
+                            <select name="year" id="" class="fl yearSelect">
+                                <option value="">请选择年</option>
+                                {foreach from=$birthday_year item=val}
+{if $val.isselect eq 1}
+                                <option value="{$val.year}" selected="selected" >{$val.year}</option>
+{else}
+                                <option value="{$val.year}">{$val.year}</option>
+{/if}
+                                {/foreach}
+                            </select>
+                            <select name="month" id="" class="fl monthSelect">
+                                <option value="">请选择月</option>
+                                {foreach from=$birthday_month item=val}
+{if $val.isselect eq 1}
+                                <option value="{$val.month}" selected="selected">{$val.month}</option>
+{else}
+                                <option value="{$val.month}" >{$val.month}</option>
+{/if}
+                                {/foreach}
+                            </select>
+                        </li>
+                        <li class="posr cf">
+                            <span class="t fl">全职/兼职：</span>
+                                {foreach from=$position key=key item=val}
+                            <label class="fl">
+{if $val.isselect eq 1}
+                                <input type="radio" checked name="position" value="{$val.type}" class="fl sex">{$val.desc}
+{else}
+                                <input type="radio" name="position" value="{$val.type}" class="fl sex">{$val.desc}
+{/if}
+                            </label>
+                                {/foreach}
+                        </li>
+                        <li>
+                            <div class="subm">
+                                <input type="submit" value="提交" class="comBlueBtn yh submitDiv">
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+</div>
+    <!-- 右侧结束 -->
+    <!-- 左侧导航开始 -->
+    {include file="{$site_url}/include/left_menu.htm"}
+    <!-- 左侧导航结束 -->
+</div>
+<!-- 主要内容结束 -->
+<!-- 底部开始 -->
+{include file="{$site_url}/include/footer.htm"}
+<!-- 底部结束 -->
+<!-- js引入开始 -->
+{include file="{$site_url}/include/js.htm"}
+<!--js引入结束-->
+</body>
+</html>

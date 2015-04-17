@@ -1,0 +1,12 @@
+.header{background: url(../../images/header/header_bg.gif) no-repeat;height:78px;position:relative;z-index100;line-height: 22px;box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);}
+.header a.logo{text-indent: -999em;overflow:hidden;display: block;width: 220px;height:50px;margin-top:18px;margin-left:20px;}
+.header .info{margin-top: 45px;margin-right:30px;color: #fff;}
+.header .info span{margin-left:20px;}
+.header .info em{color: #8ac5e4;margin:0px 10px;;}
+.header .info a{color:#fff;}
+.header .headerSlidown span.title{padding:5px 10px 10px 5px;background: url(../../images/header/ico_narrow_down.gif) no-repeat right 10px;padding-right:20px;}
+.header .headerSlidown.active span.title{background: url(../../images/header/ico_narrow_up.gif) no-repeat right 10px;}
+.header .headerSlidown ul{position: absolute;top:20px;left:0px;background:#fff;width: 80px;line-height:30px;text-align: center;border:1px solid #d7d7d7;border-bottom:0px;z-index: 100}
+.header .headerSlidown ul a{color:#333;border-bottom: 1px solid #d7d7d7;display: block;}
+.header .headerSlidown ul a:hover{background: #f8f8f8;}
+.header .orgNames{margin-right:30px;}

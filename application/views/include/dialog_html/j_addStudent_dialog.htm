@@ -1,0 +1,69 @@
+<div class="j_addStudent_dialog undis">
+    <div class="classInfo cf">
+        <!-- 内容开始 -->
+        <div class="allStudent_beta cf">
+            <!-- 全部学员开始 -->
+            <div class="studentSelect fl">
+                <span class="title">全部学员</span>
+                <div class="studentArea">
+                    <div class="hd">
+                        <!-- <div class="slideUl gradeDiv fr posr">
+                            <span class="t">全部年级</span>
+                            <ul class="cf undis">
+                                {foreach from=$gradelist key=key item=val}
+                                <li>
+                                <a href="javascript:void(0);" value="{$val.gradeId}">{$val.gradeName}</a>
+                                </li>
+                                {/foreach}
+                            </ul>
+                        </div> -->
+                        <div action="/{$view_config.classAddStuList}" class="studentSelectSearchBox">
+                            <input type="text" class="cInput studentSelectSearchBox fl" placeholder="学员姓名、编码" />
+                            <a class="submits comBlueBtn fl">搜索</a>
+                        </div>
+                        <!--<a href="javascript:void(0);" class="blueText
+                        allDatas fl">显示全部</a>-->
+                    </div>
+                    <div class="bd studentShows">
+                        <!--{if $studentList neq ''}
+{foreach from=$studentList key=key item=val}
+                        <div class="box">
+                            <span class="tit">{$key}</span>
+                            <ul>
+                            {foreach from=$val key=keys item=vals}
+{if $vals.isInThisClass eq '1'}
+                                <li class="cf active">
+{else}
+                                <li class="cf" studentId = "{$vals.studentId}">
+{/if}
+                                    <span class="name fl">
+                                        <a href="{$vals.studentUrl}" class="blueText" target="_blank">{$vals.studentName}</a>
+                                    </span>
+                                    <span class="code fl">{$vals.studentCode}</span>
+                                    <span class="grade fl">{$vals.gradeName}</span>
+                                    <a class="add fr" title="添加"></a>
+                                </li>
+{/foreach}
+                            </ul>
+                        </div>
+{/foreach}
+{/if}-->
+                    </div>
+                </div>
+            </div>
+            <!-- 全部学员结束 -->
+            <div class="hasSeleted fr">
+                <span class="title">已选择：<span class="red number">0</span>名学员</span>
+                <div class="list">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        <!-- 内容结束 -->
+        <!-- 未录入信息开始 -->
+        <div class="bottomTips">
+            学员还未录入？<a href="/{$url_config['studentAdd']}" target="_blank"  class="blueText">去录入学员</a>
+        </div>
+        <!-- 未录入信息结束 -->
+    </div>
+</div>

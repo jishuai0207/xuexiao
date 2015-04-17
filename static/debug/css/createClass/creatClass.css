@@ -1,0 +1,74 @@
+/*创建班级样式开始*/
+.createClass .hd{background: #e0e0e0;height:50px;line-height: 50px;border-bottom:1px solid #cfcfcf}
+.createClass .hd h2{font-size: 18px;font-weight: normal;padding-left:25px;}
+.createClass .content{border-top: 1px solid #fff;}
+.createClass .content ul{margin:60px 0 60px 150px;line-height: 20px;}
+.createClass .content ul li{padding-bottom: 20px;font-size: 14px;line-height: 30px;}
+.createClass .content ul li span.t{width: 120px;text-align: right;}
+.createClass .content ul li select{width: 300px;margin-bottom:10px;margin-top:6px;}
+.createClass .content ul li.selectChoose{display: none;}
+.createClass .content ul li.selectChoose select{width:80px;margin-right: 5px;text-align: center;}
+.createClass .content ul li.selectChoose span.selectItem{margin-right: 15px;}
+.createClass .content ul li.selectChoose .sign{margin:0 10px 0 5px;}
+
+.createClass .content ul li i{width:30px;height:30px;display:block;float:left;}
+/*.createClass .content ul li a{color:#2a92da;}*/
+/*.createClass .content ul li a.del{margin-left:10px;}*/
+.createClass .content ul li .tip{color: #999;margin-left:10px;font-size:12px;}
+.createClass .content ul li a:hover{color: #f90}
+.createClass .subm{margin-left:120px;}
+.createClass .content ul li .j_addTeacher{padding:0px 10px;font-size: 14px;}
+.createClass .content ul li .j_addTeacher:hover{color: #333;}
+.createClass .content ul li .teacherNames{margin:0px 10px 0 0;}
+.createClass .content ul li .teacherNames li{float: left;margin-right:5px;}
+.createClass .content ul li .teacherNames a{margin-left:5px;}
+.createClass .content ul li ul.period{margin:0px;line-height: 30px;}
+.createClass .content ul li ul.period li{float: left;margin-right:10px;padding-bottom:0px;}
+.createClass .content ul li ul.period li a{padding:0px 10px;font-size: 12px;display: block}
+.createClass .content ul li ul.period li a:hover{color: #333}
+.createClass .content ul li ul.period li a.comBlueBtn:hover{color: #fff}
+
+/*创建班级样式结束*/
+/*创建成功样式开始*/
+.createClass .creatSuccess{padding:120px 0px;text-align: center;}
+.createClass .creatSuccess span{font-size: 18px;}
+.createClass .creatSuccess a{margin-left:10px;}
+/*创建成功样式结束*/
+/*录入信息样式开始*/
+.createClass .inputSuccess{margin-left:130px;padding:120px 0px;}
+.createClass .inputSuccess .titles{font-size: 18px;padding-bottom:40px;margin-left:80px;}
+.createClass .inputSuccess .btn a{margin-left:20px;}
+/*录入信息样式结束*/
+/*添加老师弹出层样式开始*/
+.classInfo .teacherSelect .hd a.submits{padding:0px 12px;font-size: 12px;margin:0 10px;}
+/*添加老师弹出层样式结束*/
+/*添加教师样式开始*/
+.classInfo .teacherSelect{width: 500px;}
+.classInfo .teacherSelect .hd{line-height: 30px;}
+.classInfo .teacherSelect .hd .cInput{width: 200px;}
+.classInfo .teacherSelect .hd a.submits{padding:0px 12px;font-size: 12px;margin:0 10px;}
+.classInfo .teacherSelect .bd{border:1px solid #cdcdcd;margin:15px 0px;padding:5px 15px;height: 300px;overflow: auto;}
+.classInfo .teacherSelect .bd .box{}
+.classInfo .teacherSelect .bd .box span.tit{font-size:18px;margin:10px 0px;display: block;}
+.classInfo .teacherSelect .bd .box li{line-height: 50px;height:50px;overflow:hidden;font-size:14px;border-bottom:1px solid #d7d7d7;padding-bottom:5px;}
+.classInfo .teacherSelect .bd .box li span{margin-right:10px;word-break:break-all;word-wrap:break-word}
+.classInfo .teacherSelect .bd .box li span.radio{width: 10px;}
+.classInfo .teacherSelect .bd .box li em.emRadio{ cursor: pointer;background: url(../../images/common/ico_check.gif) no-repeat;width: 12px;height:12px;display:block;margin-top:20px;}
+.classInfo .teacherSelect .bd .box li em.emRadio.active{background: url(../../images/common/ico_checked.gif) no-repeat;}
+.classInfo .teacherSelect .bd .box li span.name{width: 100px;line-height: 24px;}
+.classInfo .teacherSelect .bd .box li span.code{width: 260px;}
+.classInfo .teacherSelect .bd .box span.img img{width: 40px;height: 40px}
+/*添加教师样式结束*/
+
+/*创建成功*/
+.createClassSuccess .hd {
+    height: 60px;
+    line-height: 60px;
+    margin-left: 300px;
+    margin-top: 100px;
+    border:0;
+    background-color: #F8F8F8;
+
+}
+.createClassSuccess .content{border: none;}
+.createClassSuccess .hd h2{background:url(../../images/common/success.png) no-repeat  25% center #e6f3f8;width:200px;border:1px solid #C9E2F1;font-size: 18px;font-weight: normal;padding-left:120px;}

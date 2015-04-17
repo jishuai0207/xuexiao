@@ -1,0 +1,29 @@
+.teacherInfo .topTitle{background:#e0e0e0;border-bottom:1px solid #cfcfcf;padding:30px 15px;}
+
+/*详细信息内容开始*/
+.teacherInfo .topTitle .headImg{border: 1px solid #d1d1d1;margin-right:10px;background: #fff;width: 150px;height: 150px;}
+.teacherInfo .topTitle .headImg img{width: 150px;height:150px;}
+.teacherInfo .topTitle .text h2{font-weight: normal;font-size:18px;padding-bottom:5px;}
+.teacherInfo .topTitle .text{line-height: 30px;width: 640px;}
+.teacherInfo .topTitle .text li{width: 210px;float: left;}
+.teacherInfo .topTitle .ctrl{width: 88px;margin-top:40px;}
+.teacherInfo .topTitle .ctrl li{margin-bottom:10px;}
+.teacherInfo .topTitle .ctrl a{line-height:30px;text-align:center;font-size: 12px;padding:0;display: block;}
+/*详细信息内容结束*/
+/*搜索具体列表开始*/
+.teacherInfo .teacherClassLists h2.classTitle{padding-bottom:15px;font-weight: normal}
+.teacherInfo .teacherClassLists{padding:20px;border-top:1px solid #fff;}
+
+
+.teacherInfo .teacherClassLists .hd{padding-bottom:10px;}
+.teacherInfo .teacherClassLists .hd a{margin:0 5px;color:#2187c8;}
+.teacherInfo .teacherClassLists .hd a:hover{color:#f90;}
+.teacherInfo .teacherClassLists a.active{cursor: default;color: #333;}
+.teacherInfo .teacherClassLists .bd{line-height: 22px;background:#fff;}
+
+.teacherInfo .teacherClassLists .bd .himg{margin:10px;}
+.teacherInfo .teacherClassLists .bd .himg img{margin-right:10px;border:1px solid #d3d3d3;width: 74px;height:74px;}
+.teacherInfo .teacherClassLists .bd .himg .text li{line-height: 20px;text-align: left;}
+.teacherInfo .teacherClassLists .bd .ctrl li{line-height: 22px;text-align: left;}
+/*搜索具体列表结束*/
+.ahoverNormal{color:#333 !important;}

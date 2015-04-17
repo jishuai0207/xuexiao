@@ -1,0 +1,70 @@
+
+.sign .topTitle {
+    padding:30px;
+    border-bottom:1px solid #d8d7d7;
+}
+.sign .conrtent{
+	margin: 0 10px;
+}
+.sign .conrtent .info{
+	margin-top: 10px;
+}
+.sign .topTitle .search .comBlueBtn{
+	padding: 2px 15px;
+}
+.sign .topTitle .search .comBlueBtn.import{
+	color:#346c97;
+	background-color: #fff;
+}
+.sign .topTitle .search>div{
+	margin-bottom:15px; 
+}
+.sign .topTitle ul li{
+	float: left;
+}
+.sign .topTitle ul li.tips{
+	height: 30px;
+	line-height: 30px;
+	margin: 0 5px;
+}
+.sign .topTitle .search input[type="text"],.sign .topTitle .search select{
+	height: 30px;
+	line-height: 30px;
+	/* padding: 0 10px; */
+	text-align: center;
+}
+.sign .topTitle .search select option{
+	padding: 0 10px;
+	border:1px solid #dfdfdf;
+}
+.sign .topTitle .search .signType{
+	margin-left: 60px;
+}
+.sign .topTitle .search .queryCondition span{
+	margin-right: 20px;
+}
+.sign .conrtent .line{
+	border:1px solid #fff;
+	background-color: #fff;
+	height: 30px;
+}
+.sign .comTable table{
+	/* table-layout: fixed; */
+}
+.sign .comTable table th{
+	border: 1px solid #d8d7d7;
+}
+.sign .comTable table td{
+	word-wrap: break-word;
+	height: 20px;
+	line-height: 20px;
+	padding: 10px 2px;
+	border: 1px solid #d8d7d7;
+}
+.sign .comTable table td.w170{
+	width:170px;
+}
+
+.sign .comTable table td.w100{
+	width:100px;
+}

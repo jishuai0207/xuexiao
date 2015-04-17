@@ -1,0 +1,135 @@
+.classInfo .topTitle{background:#e0e0e0;border-bottom:1px solid #cfcfcf;}
+/*班级详细信息开始*/
+.classInfo .topTitle .info{padding:30px 20px;color: #666}
+.classInfo .topTitle .info h2{font-weight: normal;font-size:18px;}
+.classInfo .topTitle .info h2 span{color:#999;}
+.classInfo .topTitle .info .bd{line-height: 30px;padding-top: 30px;border-bottom:1px solid #cfcfcf;padding-bottom:20px;}
+.classInfo .topTitle .info .bd ul{width: 560px;}
+.classInfo .topTitle .info .bd li{width: 280px;float: left;}
+.classInfo .topTitle .info .bd p{margin-top:80px;line-height: 30px;}
+.classInfo .topTitle .info .bd p .comWhiteBtn{padding: 6px 20px;margin-right:20px;}
+.classInfo .topTitle .info .ft{background:#e0e0e0;border-top:1px solid #fff;padding-top:20px;}
+.classInfo .topTitle .info .ft li{width: 460px;line-height: 22px;}
+.classInfo .topTitle .info .ft li a{margin:0px 5px;}
+.classInfo .topTitle .info .ft p.fr{margin-right:170px;}
+
+.classInfo .ti{padding:30px 20px;}
+.classInfo .ti .comBlueBtn{padding:5px 20px;}
+.classInfo .ti span.comBlueBtn{display: block}
+.classInfo .ti .slideUl{margin-left:10px;}
+.classInfo .ti .slideUlHover .comBlueBtn{border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;}
+.classInfo .ti .slideUl ul{position: absolute;top:30px;left:0px;background:#fff;border:1px solid #d9d9d7;border-top:0px;width: 146px;line-height: 30px;}
+.classInfo .ti .slideUl ul li a{display: block;font-size: 14px;text-indent: 10px;border-bottom:1px solid #d9d9d7;}
+.classInfo .studentLists .ti .slideUl{margin-top:0px;}
+/*班级详细信息结束*/
+/*学员列表开始*/
+.classInfo .studentLists{margin: 30px;border: 1px solid #d1d1d1;background:#fff;}
+.classInfo .studentLists .hd{background:url(../../images/classInfo/tit_bg.gif) repeat-x;height: 40px;line-height: 40px;}
+.classInfo .studentLists .hd a{padding:0px 20px;display: inline-block;text-align: center;}
+.classInfo .studentLists .hd a.active{background:#fff;border-right:1px solid #d1d1d1;color: #333;cursor: default;}
+.classInfo .studentLists .hd a.active2{border-left:1px solid #d1d1d1;}
+.classInfo .studentLists .bd .ti{padding:20px 15px 10px 15px;margin-bottom:20px;line-height: 40px;border-bottom:1px solid #dedede;}
+.classInfo .studentLists .bd .ti span.fl .comBlueBtn{padding:2px 15px;margin-right:10px;line-height: 30px;margin-top:5px;font-size:16px;}
+.classInfo .studentLists .bd .slideUl{width:147px;}
+.classInfo .studentLists .bd .ti .download{background:url(../../images/classInfo/ico_down.gif) no-repeat left;padding-left:25px;height:40px;display: block;margin-left:10px;}
+.classInfo .studentLists .bd .comTable{padding:0px 15px;}
+.classInfo .studentLists .bd .comTable th{background:#eaeaea;height: 39px;line-height: 39px;border-bottom: 1px solid #d9d9d9}
+.classInfo .studentLists .bd .comTable td{padding:10px;}
+.classInfo .studentLists .bd .comTable td p.timeScheduleDate{line-height: 20px;}
+.classInfo .studentLists .bd .comTable td .himg img{margin-right:10px;width: 38px;height:38px;}
+.classInfo .studentLists .bd .comTable td .ctrl a{margin:0px 2px;}
+/*学员列表结束*/
+/*添加教师样式开始*/
+.classInfo .teacherSelect{width: 500px;}
+.classInfo .teacherSelect .hd{line-height: 30px;padding:10px 0px;}
+.classInfo .teacherSelect .hd .cInput{width: 200px;}
+.classInfo .teacherSelect .hd a.submits{padding:0px 12px;font-size: 12px;margin:0 10px;}
+.classInfo .teacherSelect .bd{border:1px solid #cdcdcd;margin:15px 0px;padding:5px 15px;height: 300px;overflow: auto;}
+.classInfo .teacherSelect .bd .box{}
+.classInfo .teacherSelect .bd .box span.tit{font-size:18px;margin:10px 0px;display: block;}
+.classInfo .teacherSelect .bd .box li{line-height: 50px;height:50px;overflow:hidden;font-size:14px;border-bottom:1px solid #d7d7d7;padding-bottom:5px;}
+.classInfo .teacherSelect .bd .box li span{margin-right:10px;overflow:hidden;}
+.classInfo .teacherSelect .bd .box li span.radio{width: 15px;}
+.classInfo .teacherSelect .bd .box li em.emRadio{ cursor: pointer;background: url(../../images/common/ico_check.gif) no-repeat;width: 12px;height:12px;display:block;margin-top:20px;}
+.classInfo .teacherSelect .bd .box li em.emRadio.active{background: url(../../images/common/ico_checked.gif) no-repeat;}
+.classInfo .teacherSelect .bd .box li span.name{width: 100px;line-height: 24px;}
+.classInfo .teacherSelect .bd .box li span.code{width: 260px;}
+.classInfo .teacherSelect .bd .box span.img img{width: 40px;height: 40px}
+/*添加教师样式结束*/
+/*添加学员弹出层样式开始*/
+.classInfo .allStudent{width: 780px;}
+.classInfo span.title{font-size:12px;}
+.classInfo .studentSelect{width: 376px;}
+
+.classInfo .gradeDiv{margin-right:10px;}
+.classInfo .gradeDiv span.t{background:url(../../images/common/ico_select_down.gif) no-repeat 70px 10px #fff;padding:3px 15px 3px 8px;border:1px solid #d7d7d7;}
+.classInfo .gradeDiv ul{position: absolute;top:28px;right:0px;background:#fff;border:1px solid #d7d7d7;width: 330px;padding:0 8px;}
+.classInfo .gradeDiv ul li{float: left;margin-right:5px;}
+.classInfo .gradeDiv ul li a{display: block;font-size: 14px;padding:0 10px 0 18px;background: url(../../images/common/ico_checkbox.gif) no-repeat left;}
+.classInfo .gradeDiv ul li a:hover{color: #333;}
+.classInfo .gradeDiv ul li a.active{background: url(../../images/common/ico_checkbox_active.gif) no-repeat left;color: #333}
+
+.classInfo .allStudent .studentArea{border:1px solid #cdcdcd;}
+.classInfo .allStudent .studentSelect .hd{background:#e1e1e1;line-height: 30px;border-bottom:1px solid #cdcdcd;padding:5px 0 5px 0px}
+.classInfo .allStudent .studentSelect .hd select{margin-top:5px;margin-right: 10px;}
+.classInfo .allStudent .studentSelect .studentSelectSearchBox .cInput{width: 110px;margin-left:10px;}
+.classInfo .allStudent .studentSelect a.submits{padding:0px 12px;font-size: 12px;margin:0 10px;}
+
+.classInfo .allStudent .studentArea .bd{padding:0px 10px;font-size:14px;line-height: 30px;height:300px;overflow:auto;_overflow:scroll;}
+.classInfo .allStudent .studentArea .bd span.tit{font-size:18px;}
+.classInfo .allStudent .studentArea .bd li{border-bottom:1px solid #e8e8e8;padding:4px 0px;overflow: hidden;height:30px;}
+.classInfo .allStudent .studentArea .bd li span{overflow: hidden;margin:0px 5px;}
+.classInfo .allStudent .studentArea .bd li span.name{width: 110px;}
+.classInfo .allStudent .studentArea .bd li span.code{width: 116px;}
+.classInfo .allStudent .studentArea .bd li span.grade{width: 50px;}
+.classInfo .allStudent .studentArea .bd li a.add{width: 23px;margin-top:4px; cursor: pointer;height:22px;background: url(../../images/classInfo/ico_add.gif) no-repeat;text-indent: -999em;overflow:hidden;}
+.classInfo .allStudent .studentArea .bd li.active{color: #999}
+.classInfo .allStudent .studentArea .bd li.active a{color:#999;}
+.classInfo .allStudent .studentArea .bd li.active a:hover{color: #f90}
+
+.classInfo .allStudent .hasSeleted{width: 376px;}
+.classInfo .allStudent .hasSeleted .list{border:1px solid #cdcdcd;padding:0 10px;height:339px;overflow: auto;_overflow:scroll;}
+.classInfo .allStudent .hasSeleted .list li{border-bottom:1px solid #e8e8e8;padding:4px 0px;}
+.classInfo .allStudent .hasSeleted .list li span{overflow: hidden;margin:0px 5px;}
+.classInfo .allStudent .hasSeleted .list li span.name{width: 110px;}
+.classInfo .allStudent .hasSeleted .list li span.code{width: 100px;}
+.classInfo .allStudent .hasSeleted .list li span.grade{width: 70px;}
+.classInfo .allStudent .hasSeleted .list li a.remove{width: 23px;margin-top:4px;height:22px;background: url(../../images/classInfo/ico_remove.gif) no-repeat;text-indent: -999em;overflow:hidden;cursor: pointer;}
+.classInfo .bottomTips{padding-top:10px;}
+/*添加学员弹出层样式结束*/
+/*弹出修改基本信息样式开始*/
+.classInfo .FormModifyBaseInfo li{padding:6px 0px;}
+.classInfo .FormModifyBaseInfo li span.t{width: 90px;text-align: right;}
+.classInfo .FormModifyBaseInfo li input{margin-left:10px;}
+.classInfo .FormModifyBaseInfo li p.in{float: left;margin-left:10px;color: #666;}
+.classInfo .FormModifyBaseInfo li .Validform_checktip{float:left;}
+/*弹出修改基本信息样式结束*/
+/*更改老师样式开始*/
+.classInfo .changeClass{padding-bottom:10px;}
+.classInfo .changeClass .bold{font-weight: bold;}
+/*更改老师样式结束*/
+/*排课页面样式开始*/
+.classInfo .currentScheduleShows table td .ctrl{line-height: 20px;text-align: left;}
+/*排课页面样式结束*/
+/*排课弹出层样式开始*/
+.classInfo .Schedule{line-height: 30px;font-size: 14px;}
+.classInfo .Schedule li{padding:5px 0px;}
+.classInfo .Schedule li span.t{width: 100px;text-align: right;margin-right:10px;}
+.classInfo .Schedule li select,.classInfo .Schedule li input{margin:0px 5px;}
+.classInfo .Schedule li select{margin-top:6px;}
+.classInfo .Schedule li .cInput{width: 20px;}
+/*排课弹出层样式结束*/
+/*批量添加学员下拉菜单样式开始*/
+.classInfo .studentLists .slideUl{margin-top:10px;margin-left:10px;}
+.classInfo .studentLists .comBlueBtn{border-bottom-right-radius: 10x;border-bottom-left-radius: 10x;width:108px;}
+.classInfo .studentLists .slideUlHover .comBlueBtn{border-bottom-right-radius: 10x;border-bottom-left-radius: 10x;}
+.classInfo .studentLists .slideUl ul{position: absolute;top:50px;left:0px;background:#fff;border:1px solid #d9d9d7;border-top:0px;width: 146px;line-height: 30px;}
+.classInfo .studentLists .slideUl ul li a{display: block;font-size: 14px;text-indent: 10px;border-bottom:1px solid #d9d9d7;}
+/*.classInfo .studentLists .slideUl ul li a:hover{background:#c8c8c8;color: #333}*/
+/*批量添加学员下拉菜单样式结束*/
+
+
+/*新增时间选择等*/
+.classInfo .FormModifyBaseInfo  ul li.selectChoose select{width:80px;margin-right: 5px;text-align:center;margin-left: 10px;height: 24px;line-height: 24px;}
+.classInfo .FormModifyBaseInfo ul li.selectChoose span.selectItem{margin-right: 15px;}
+.classInfo .FormModifyBaseInfo ul li.selectChoose .sign{margin-left: 10px;}

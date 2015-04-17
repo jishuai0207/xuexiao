@@ -1,0 +1,36 @@
+/*录入学员样式开始*/
+.studentAdd .hd{background: #e0e0e0;height:50px;line-height: 50px;border-bottom:1px solid #cfcfcf}
+.studentAdd .hd h2{font-size: 18px;font-weight: normal;padding-left:25px;}
+.studentAdd .content{border-top: 1px solid #fff;}
+.studentAdd .content .cInput{margin-right:10px;}
+.studentAdd .content ul.pd{margin:60px 100px;line-height: 20px;}
+.studentAdd .content ul.pd li{padding-bottom: 20px;font-size: 14px;line-height: 30px;}
+.studentAdd .content ul.pd li span.t{width: 120px;text-align: right;margin-right:10px;}
+.studentAdd .content ul.pd li a:hover{color: #f90}
+.studentAdd .content ul.seculs li span.t{width: 80px;}
+.studentAdd .content ul.pd .greyBg{padding:10px 20px;}
+.studentAdd .formInputStudent li.posr select{margin-top:8px;margin-right:10px;}
+.studentAdd .content .sex{vertical-align: middle;margin:10px 5px 0 5px; }
+.studentAdd .subm{margin-left:120px;}
+/*录入学员样式结束*/
+/*创建成功样式开始*/
+.studentAdd .creatSuccess{padding:100px 0px;text-align: center;}
+.studentAdd .creatSuccess p{font-size: 18px;padding-bottom:30px;}
+.studentAdd .creatSuccess a{margin-left:10px;}
+.studentAdd .creatSuccess.textAlign{text-align: left;padding-left:30px;padding-top:60px;line-height: 35px;}
+/*创建成功样式结束*/
+
+/*录入成功样式开始*/
+.studentAddSuccess .hd {
+    height: 60px;
+    line-height: 60px;
+    margin-left: 300px;
+    margin-top: 100px;
+    border:0;
+    background-color: #F8F8F8;
+}
+.studentAddSuccess .content{border: none;}
+.studentAddSuccess .hd h2{background:url(../../images/common/success.png) no-repeat  25% center #e6f3f8;width:180px;border:1px solid #C9E2F1;font-size: 18px;font-weight: normal;padding-left:120px;}
+.studentAddSuccess .creatSuccess.textAlign{padding-left: 250px;} 
+.studentAddSuccess .creatSuccess a{padding:8px 10px;}
+/*录入成功样式结束*/

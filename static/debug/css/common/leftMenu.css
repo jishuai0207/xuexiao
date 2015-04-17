@@ -1,0 +1,33 @@
+.leftMenu{background: url(../../images/leftMenu/left_bg.jpg) no-repeat top left #3c88bd;width: 78px;border: 1px solid #255b8e;border-top:0px;border-bottom:0px;}
+.leftMenu li{text-align: center;background: url(../../images/leftMenu/li_bg.gif) repeat-x bottom left;padding-bottom:1px;}
+.leftMenu li a{color: #fff;;display: block;padding: 10px 0;}
+.leftMenu li.active a,
+.leftMenu a:hover{background: url(../../images/leftMenu/hover_bg.gif) no-repeat right center #07325a;text-decoration: none;border-right:1px solid #76b5c5;}
+.leftMenu span.ico{background: url(../../images/leftMenu/ico.png) no-repeat;_background: url(../../images/leftMenu/ico_8.png) no-repeat;width: 40px;height:30px;display: block;margin:0px 0px 2px 20px}
+.leftMenu .sign span.ico{background: url(../../images/leftMenu/sign.png) center center no-repeat;}
+.leftMenu .sign span.ico:hover,.leftMenu .sign.active span.ico{background: url(../../images/leftMenu/signHover.png) center center no-repeat;}
+
+
+.leftMenu .homepage span.ico{background-position: 2px 0px}
+.leftMenu .homepage.active a span.ico,
+.leftMenu .homepage a:hover span.ico{background-position: -63px 0px}
+
+.leftMenu .teacher span.ico{background-position: 2px -72px}
+.leftMenu .teacher.active a span.ico,
+.leftMenu .teacher a:hover span.ico{background-position: -63px -72px}
+
+.leftMenu .class span.ico{background-position: 2px -144px}
+.leftMenu .class.active a span.ico,
+.leftMenu .class a:hover span.ico{background-position: -63px -144px}
+
+.leftMenu .student span.ico{background-position: 2px -216px}
+.leftMenu .student.active a span.ico,
+.leftMenu .student a:hover span.ico{background-position: -63px -216px}
+
+.leftMenu .classType span.ico{background-position: 2px -290px}
+.leftMenu .classType.active a span.ico,
+.leftMenu .classType a:hover span.ico{background-position: -63px -290px}
+
+.leftMenu .system span.ico{background-position: 2px -365px}
+.leftMenu .system.active a span.ico,
+.leftMenu .system a:hover span.ico{background-position: -63px -365px}

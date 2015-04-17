@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<title>老师详细页面</title>
+<link rel="shortcut icon" href=" /favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/{$static_url}/{$static_version}/css/teacherInfo/style.css" />
+<!-- 定义全局变量开始 -->
+{include file="{$site_url}/include/var.htm"}
+<!-- 定义全局变量结束 -->
+</head>
+<body>
+<!-- 头部开始 -->
+{include file="{$site_url}/include/header.htm"}
+<!-- 头部结束 -->
+<!-- 主要内容开始 -->
+<div class="wrap layout">
+    <!-- 右侧开始 -->
+    <div class="mainContent comBg fr" id="mainContent">
+    	<div class="teacherInfo" id="moduleId" pagename="teacherInfo">
+    		<div class="topTitle cf">
+				<div class="headImg fl">
+					<img src="{$info->path}" alt="">
+				</div>
+				<div class="text fl">
+					<h2>
+						{$info->truthName}
+						<span class="red">{$info->inJob}{$info->status}</span>
+					</h2>
+					<ul class="cf">
+						<li>
+							<span class="t fl">老师编码：</span>
+							{$info->teacherCode}
+						</li>
+						<li>
+							<span class="t fl">性别：</span>
+							{$info->sex}
+						</li>
+						<li>
+							<span class="t fl">手机：</span>
+							{$info->telphone}
+						</li>
+						<li>
+							<a title="{$info->userName}" class="t fl ahoverNormal">用户名：{$info->subuserName}</a>
+						</li>
+						<li>
+							<a title="{$info->email}" class="t fl ahoverNormal">邮箱：{$info->subemail}</a>
+						</li>
+						<li>
+							<span class="t fl">宣传姓名：</span>
+							{$info->nickname}
+						</li>
+						<li>
+							<span class="t fl">出生年月：</span>
+							{$info->birthday}
+						</li>
+						<li>
+							<span class="t fl">录入时间：</span>
+							{$info->createTime}
+						</li>
+						<li>
+							<span class="t fl">学科：</span>
+							{$info->subjects}
+						</li>
+						<li>
+							<span class="t fl">全职/兼职：</span>
+							{$info->position}
+						</li>
+						<li>
+							<span class="t fl">身份证号：</span>
+							{$info->idCard}
+						</li>
+					</ul>
+				</div>
+				<div class="ctrl fl">
+					<ul>
+						{if $info->ifmodify eq 1}
+						<li>
+							<a href="{$modify}" class="comWhiteBtn">修改基本信息</a>
+						</li>
+						{/if}
+						{if $info->inJob eq ''}
+						<li>
+							<a href="javascript:void(0)" url="{$off}" teacherId="{$teacherId}" class="comWhiteBtn leaveOff">离职登记</a>
+						</li>
+						{else}
+						<li>
+							<a href="javascript:void(0)" url="{$on}" teacherId="{$teacherId}" class="comWhiteBtn leaveOn">入职登记</a>
+						</li>
+						{/if}
+					</ul>
+				</div>
+			</div>
+			<!-- 班级列表开始 -->
+			<div class="teacherClassLists">
+				<h2 class="classTitle">任课班级</h2>
+				<div class="hd">
+					<span class="fr">
+						共<span class="red">{$total}</span>个班级
+					</span>
+					<a href="{$current}" class="blueText {if $part eq 'c'}active{/if}">目前班级</a> | 
+					<a href="{$history}" class="blueText {if $part eq 'h'}active{/if}">历史班级</a> | 
+					<a href="{$all}" class="blueText {if $part eq 'a'}active{/if}">全部班级</a>
+				</div>
+				<div class="bd">
+					<div class="comTable">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<th>班级</th>
+								<th>学员数</th>
+								<th>班级起止时间</th>
+								<th>加入班级时间</th>
+							</tr>
+							{if $classList neq false}
+							{foreach from=$classList item=v}
+							<tr>
+								<td>
+									<a href="{$v.classUrl}" class="blueText">{$v.name}</a>
+								</td>
+								<td>{$v.stuNum}</td>
+								<td>{$v.beginTime}-{$v.endTime}</td>
+								<td>{$v.joinTime}</td>
+							</tr>
+							{/foreach}
+							{else}
+							<tr><td>没有任课班级</td></tr>
+							{/if}
+						</table>
+					</div>
+				</div>
+				<!-- 分页开始 -->
+				<div class="page cf">
+					<div class="pageContent">
+								{$page}
+					</div>
+				</div>
+				<!-- 分页结束 -->
+			</div>
+			<!-- 班级列表结束 -->
+		</div>
+    </div>
+    <!-- 右侧结束 -->
+    <!-- 左侧导航开始 -->
+    {include file="{$site_url}/include/left_menu.htm"}
+    <!-- 左侧导航结束 -->
+</div>
+<!-- 主要内容结束 -->
+<!-- 底部开始 -->
+{include file="{$site_url}/include/footer.htm"}
+<!-- 底部结束 -->
+<!-- js引入开始 -->
+{include file="{$site_url}/include/js.htm"}
+<!--js引入结束-->
+</body>
+</html>

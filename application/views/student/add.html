@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<title>录入学员</title>
+<link rel="shortcut icon" href=" /favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/{$static_url}/{$static_version}/css/studentAdd/style.css" />
+<!-- 定义全局变量开始 -->
+{include file="{$site_url}/include/var.htm"}
+<!-- 定义全局变量结束 -->
+</head>
+<body>
+<!-- 头部开始 -->
+{include file="{$site_url}/include/header.htm"}
+<!-- 头部结束 -->
+<!-- 主要内容开始 -->
+<div class="wrap layout">
+    <!-- 右侧开始 -->
+    <div class="mainContent comBg fr" id="mainContent">
+    	<div class="studentAdd" id="moduleId" pagename="studentAdd">
+    		<div class="hd">
+				<h2>录入学员</h2>
+			</div>
+			<div class="content">
+				<form action="{$postUrl}" method="post" class="formInputStudent" onsubmit="return false;">
+					<ul class="pd">
+						<li class="posr cf">
+							<span class="t fl"><em class="red">*</em>姓名：</span>
+							<input name="truthName" type="text" class="cInput username fl" />
+							<span class="grey fl">汉字或英文,最多4个汉字或40个字符</span>
+						</li>
+						<li class="posr cf">
+							<span class="t fl"><em class="red">*</em>在校年级：</span>
+							<select name="grade" id="" class="fl">
+								<option value="">请选择</option>
+								{foreach from=$grade key=k item=v}
+								<option value="{$v.id}">{$v.name}</option>
+								{/foreach}
+							</select>
+							<p class="fl">
+								每年9月1日系统会自动将所有学员年级升一级。如果个别学员情况不同，您可以单个修改。
+							</p>
+						</li>
+						<li class="posr cf">
+							<span class="t fl">家长A：</span>
+							<div class="greyBg fl">
+								<ul class="seculs">
+									<li class="posr cf">
+										<span class="t fl"><em class="red">*</em>手机号：</span>
+										<input type="text" name="parentTel1" class="cInput username fl" />
+									</li>
+									<li class="posr cf">
+										<span class="t fl"><em class="red"></em>关系：</span>
+										<select name="parent1ref" id="" class="fl">
+											<option value="">请选择</option>
+											<option value="父亲">父亲</option>
+											<option value="母亲">母亲</option>
+											<option value="其他">其他</option>
+										</select>
+									</li>
+								</ul>
+								<a href="javascript:void(0)" class="blueText addParents">添加家长</a>
+							</div>
+						</li>
+						<li class="posr cf addParentsUl undis">
+							<span class="t fl">家长B：</span>
+							<div class="greyBg fl">
+								<ul class="seculs">
+									<li class="posr cf">
+										<span class="t fl">手机号：</span>
+										<input type="text" name="parentTel2" class="cInput username fl" />
+									</li>
+									<li class="posr cf">
+										<span class="t fl">关系：</span>
+										<select name="parent2ref" id="" class="fl">
+											<option value="">请选择</option>
+											<option value="父亲">父亲</option>
+											<option value="母亲">母亲</option>
+											<option value="其他">其他</option>
+										</select>
+									</li>
+								</ul>
+								<a href="javascript:void(0)" class="blueText delParents">删除家长B</a>
+							</div>
+						</li>
+						<li class="posr cf">
+							<span class="t fl"><em class="red"></em>原学号：</span>
+							<input name="schoolCode" type="text" class="cInput username fl" placeholder="输入学员在您机构的学号" />
+						</li>
+						<li class="posr cf">
+							<span class="t fl">性别：</span>
+							<label class="fl">
+								<input type="radio" name="sex" value="1" class="fl sex">男
+							</label>
+							<label class="fl">
+								<input type="radio" name="sex" value="0" class="fl sex">女
+							</label>
+						</li>
+						<li class="posr cf">
+							<span class="t fl">出生年月：</span>
+							<select name="year" id="" class="fl yearSelect">
+								<option value="">请选择年</option>
+								{foreach from=$year item=v}
+								<option value="{$v}">{$v}</option>
+								{/foreach}
+							</select>
+							<select name="month" id="" class="fl monthSelect">
+								<option value="">请选择月</option>
+								<option value="01">01</option>
+								<option value="02">02</option>
+								<option value="03">03</option>
+								<option value="04">04</option>
+								<option value="05">05</option>
+								<option value="06">06</option>
+								<option value="07">07</option>
+								<option value="08">08</option>
+								<option value="09">09</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select>
+						</li>
+						<li class="posr cf">
+							<span class="t fl"><em class="red"></em>所在学校：</span>
+							<input type="text" name="school" class="cInput username fl" />
+						</li>
+						<li>
+							<div class="subm">
+								<input type="submit" value="录入" class="comBlueBtn yh submitDiv">
+							</div>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+    </div>
+    <!-- 右侧结束 -->
+    <!-- 左侧导航开始 -->
+    {include file="{$site_url}/include/left_menu.htm"}
+    <!-- 左侧导航结束 -->
+</div>
+<!-- 主要内容结束 -->
+<!-- 底部开始 -->
+{include file="{$site_url}/include/footer.htm"}
+<!-- 底部结束 -->
+<!-- js引入开始 -->
+{include file="{$site_url}/include/js.htm"}
+<!--js引入结束-->
+</body>
+</html>

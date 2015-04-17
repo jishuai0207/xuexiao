@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="loginBg">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<title>{$title}</title>
+<link rel="shortcut icon" href=" /favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/{$static_url}/{$static_version}/css/login/style.css" />
+<!-- 定义全局变量开始 -->
+{include file="{$site_url}/include/var.htm"}
+<!-- 定义全局变量结束 -->
+</head>
+<body>
+<!-- 头部开始 -->
+
+<!-- 头部结束 -->
+<!-- 主要内容开始 -->
+<div id="moduleId" pagename="login" class="login">
+	<div class="layout">
+		<h1>高思 高度决定视野,思想创造未来</h1>
+	</div>
+	<div class="con">
+		<div class="layout">
+			<div class="logins fr">
+				<h2>机构用户登录</h2>
+				{if $backurl neq ''}
+                    <p class="outInfo">登录已过期!,请重新登录。</p>
+                {/if}
+				<form action="/{$post_config.login}" class="formLogin" method="post" onsubmit="return false">
+					<ul>
+						<li>
+							<input type="text" name="usercode" value="" class="text username yh" placeholder="手机号" />
+						</li>
+						<li>
+							<input type="password" name="password" value="" class="text password yh" placeholder="密码" />
+						</li>
+						<li class="i cf">
+							<label class="fl">
+								<input type="checkbox" checked='checked' name='remeberme' />下次自动登录
+							</label>
+							<a href="/{$url_config.forgetPass}"  target="_blank" class="fegot fr">忘记密码？</a>
+						</li>
+						<li class="s">
+							<input type="submit" class="submits yh" value="登录" />
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- tel开始 -->
+	<div class="tels">
+		<div class="layout">
+			<p class="tel fr">
+				客服400-012-33
+			</p>
+		</div>
+	</div>
+	<!-- tel结束 -->
+</div>
+<!-- 主要内容结束 -->
+<!-- js引入开始 -->
+{include file="{$site_url}/include/js.htm"}
+<!--js引入结束-->
+</body>
+</html>

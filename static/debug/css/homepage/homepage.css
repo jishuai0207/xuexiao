@@ -1,0 +1,24 @@
+/*快捷菜单样式开始*/
+.homepage .quickLinks{background: #e0e0e0;padding:30px 0px;border-bottom:1px solid #cfcfcf}
+.homepage .quickLinks ul{margin-left:180px;}
+.homepage .quickLinks li{float:left;margin:0px 11px;}
+.homepage .quickLinks li a{display: block;border-radius:5px;border:1px solid #d6d6d6;background:#ebebeb;padding:15px 10px 15px 50px;background: url(../../images/leftMenu/ico_quick.png) no-repeat #ebebeb;_background: url(../../images/leftMenu/ico_quick_8.png) no-repeat #ebebeb;font-size: 18px;}
+.homepage .quickLinks li a.add{background-position: 10px 14px}
+.homepage .quickLinks li a.add:hover{background-position: -200px 14px}
+
+.homepage .quickLinks li a.student{background-position: 2px -57px}
+.homepage .quickLinks li a.student:hover{background-position: -207px -57px;}
+
+.homepage .quickLinks li a.class{background-position: 10px -130px}
+.homepage .quickLinks li a.class:hover{background-position: -212px -130px;}
+
+.homepage .quickLinks li a.teacher{background-position: 10px -206px}
+.homepage .quickLinks li a.teacher:hover{background-position: -211px -206px;}
+
+.homepage .quickLinks li a:hover{border-color: #9ed6e6;background-color:#bfebf8;color: #333;text-decoration: none;}
+/*快捷菜单样式结束*/
+/*今日课程区域样式开始*/
+.homepage .todayClass{padding:40px 30px 200px 30px;border-top:1px solid #fff;}
+.homepage .todayClass .hd{padding-bottom:10px;}
+.homepage .todayClass .hd h2{font-size: 16px;}
+/*今日课程区域样式结束*/

@@ -1,0 +1,22 @@
+select 
+	stu.truthName as '姓名',
+	hw.id as '作业Id',
+	stu.code as '学员编码',
+	cls.classCode as '班级编码',
+	clsType.code as '班型编码',
+	cls.className as '班级名称',
+	ls.num as '讲次',
+	tp.sort as '题号',
+	tp.answer as '标准答案',
+	ans.answer as '学生答案'
+from student_homework stuHw
+	left join Student stu on stuHw.studentId = stu.id		
+	left join Class cls on stuHw.classId = cls.id
+	left join ClassType clsType on cls.classTypeId = clsType.id
+	left join HomeWork hw on stuHw.homeWorkId = hw.id
+	left join Lesson ls on hw.num = ls.id
+	left join Answer ans on ans.studentHomeWork = stuHw.id
+	left join Topic tp on ans.topicId = tp.id
+where stu.id is not null and ans.id is not null and tp.id is not null 
+	and ans.result != 1
+	and clsType.period=4 and stuHw.submitTime>'2015-01-24 00:00:00';

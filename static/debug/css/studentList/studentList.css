@@ -1,0 +1,33 @@
+.studentList .topTitle{background:#e0e0e0;border-bottom:1px solid #cfcfcf;}
+
+.studentList .topTitle .tii{padding:30px 20px;}
+.studentList .topTitle .tii .comBlueBtn{padding:5px 20px;}
+.studentList .topTitle .tii span.comBlueBtn{display: block}
+.studentList .topTitle .tii .slideUl{margin-left:10px;}
+.studentList .topTitle .tii .slideUlHover .comBlueBtn{border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;}
+.studentList .topTitle .tii .slideUl ul{position: absolute;top:30px;left:0px;background:#fff;border:1px solid #d9d9d7;border-top:0px;width: 146px;line-height: 30px;}
+.studentList .topTitle .tii .slideUl ul li a{display: block;font-size: 14px;text-indent: 10px;border-bottom:1px solid #d9d9d7;}
+/*搜索区域开始*/
+.studentList .topTitle .search{padding:0 15px 20px;line-height: 30px;}
+.studentList .topTitle .search .selectInfo select{margin-top:6px;}
+.studentList .topTitle .search .cInput{width: 200px;}
+.studentList .topTitle .search .comBlueBtn{padding:5px 20px;font-size: 12px;margin-left:10px;}
+/*搜索区域结束*/
+/*搜索具体列表开始*/
+.studentList .studentLists{padding:20px;border-top:1px solid #fff;}
+.studentList .studentLists .hd a{color:#2187c8;}
+.studentList .studentLists .hd a:hover{color:#f90;}
+.studentList .studentLists .hd a.active{cursor: default;color: #333;}
+
+.studentList .studentLists .hd{padding-bottom:10px;}
+.studentList .studentLists .hd a{margin:0 5px;}
+.studentList .studentLists .bd{line-height: 22px;background:#fff;}
+
+.studentList .studentLists .bd .himg{margin:10px;}
+.studentList .studentLists .bd .himg img{margin-right:10px;border:1px solid #d3d3d3;width: 74px;height:74px;}
+.studentList .studentLists .bd .himg .text li{line-height: 20px;text-align: left;}
+.studentList .studentLists .bd .ctrl li{line-height: 22px;text-align: left;}
+/*搜索具体列表结束*/
+/*箭头*/
+.studentList .icoUp{background: url(../../images/common/ico_narrow_up.gif) no-repeat right;padding-right:18px;}
+.studentList .icoDown{background: url(../../images/common/ico_narrow_down.gif) no-repeat right;padding-right:18px;}
